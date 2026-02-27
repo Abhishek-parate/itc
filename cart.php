@@ -665,7 +665,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="p-5">
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
                 <?php foreach($related as $rel): ?>
-                <div class="related-card-bottom" onclick="window.location.href='product_details.php?slug=<?= urlencode($rel['slug']) ?>'">
+                <div class="related-card-bottom" onclick="window.location.href='cart.php?slug=<?= urlencode($rel['slug']) ?>'">
                     <img src="<?= htmlspecialchars($rel['image']) ?>"
                          alt="<?= htmlspecialchars($rel['name']) ?>"
                          class="related-card-bottom-img"
