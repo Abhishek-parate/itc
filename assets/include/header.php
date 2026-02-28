@@ -5,162 +5,6 @@
  * Search dropdown → product_details.php?slug= (DB se data fetch hoga)
  */
 ?>
-
-<!-- Header Section -->
-<header class="bg-white shadow-md sticky top-0 z-50">
-    <nav class="container mx-auto px-4 py-4">
-        <div class="flex items-center justify-between">
-
-            <!-- Logo Section -->
-            <div class="flex items-center space-x-3 flex-shrink-0">
-                <img src="./assets/images/ITC LOGO.png" alt="Indian Traders Corp Logo" class="h-12 w-12">
-                <div>
-                    <h1 class="text-xl font-bold text-primary">Indian Traders Corp</h1>
-                    <p class="text-xs text-gray-600">Since 1969</p>
-                </div>
-            </div>
-
-            <!-- SEARCH BAR - DESKTOP -->
-            <div class="hidden lg:flex items-center flex-1 max-w-xl mx-8 relative" id="desktopSearchWrapper">
-                <div class="relative w-full group">
-                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none z-10">
-                        <svg class="w-5 h-5 text-gray-400 group-focus-within:text-secondary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </div>
-                    <input
-                        type="text"
-                        id="searchInput"
-                        placeholder="Search for products, categories..."
-                        autocomplete="off"
-                        class="w-full pl-12 pr-24 py-3 bg-gray-50 border-2 border-gray-200 rounded-full text-gray-700 placeholder-gray-400 focus:outline-none focus:bg-white focus:border-secondary focus:ring-4 focus:ring-secondary/10 transition-all duration-300 ease-in-out"
-                    >
-                </div>
-
-                <!-- Desktop Dropdown Results — PROFESSIONAL ECOMMERCE STYLE -->
-                <div id="searchDropdown"
-                     class="hidden absolute top-full left-0 right-0 mt-3 bg-white rounded-2xl z-[9999] overflow-hidden"
-                     style="box-shadow: 0 20px 60px rgba(0,0,0,0.15); border: 1px solid #e8edf5;">
-                </div>
-            </div>
-
-            <!-- Desktop Navigation -->
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="index.php" class="text-gray-700 hover:text-secondary font-semibold transition">Home</a>
-
-                <!-- About Dropdown -->
-                <div class="relative group">
-                    <button class="text-gray-700 hover:text-secondary font-semibold transition flex items-center space-x-1">
-                        <span>About</span>
-                        <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2 z-50">
-                        <div class="py-2">
-                            <a href="documentation.php" class="block px-6 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-secondary/10 hover:to-red-50 hover:text-secondary font-medium transition-all border-l-4 border-transparent hover:border-secondary">
-                                <div class="flex items-center space-x-3">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                                    <span>Documentation</span>
-                                </div>
-                            </a>
-                            <a href="industry-we-serve.php" class="block px-6 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-secondary/10 hover:to-red-50 hover:text-secondary font-medium transition-all border-l-4 border-transparent hover:border-secondary">
-                                <div class="flex items-center space-x-3">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-                                    <span>Industry We Serve</span>
-                                </div>
-                            </a>
-                            <a href="why-itc.php" class="block px-6 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-secondary/10 hover:to-red-50 hover:text-secondary font-medium transition-all border-l-4 border-transparent hover:border-secondary">
-                                <div class="flex items-center space-x-3">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
-                                    <span>Why ITC</span>
-                                </div>
-                            </a>
-                            <a href="mission-vision.php" class="block px-6 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-secondary/10 hover:to-red-50 hover:text-secondary font-medium transition-all border-l-4 border-transparent hover:border-secondary rounded-b-lg">
-                                <div class="flex items-center space-x-3">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                                    <span>Mission & Vision</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="products.php" class="text-gray-700 hover:text-secondary font-semibold transition">Products</a>
-                <a href="contact.php"  class="text-gray-700 hover:text-secondary font-semibold transition">Contact</a>
-
-                <button onclick="openQuoteModal()" class="bg-gradient-to-r from-secondary to-red-700 text-white px-6 py-2 rounded-lg font-bold hover:from-red-700 hover:to-secondary transition-all transform hover:scale-105 shadow-lg">
-                    Get Quote
-                </button>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button id="mobileMenuBtn" class="md:hidden text-gray-700 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-4">
-
-            <!-- Mobile Search Bar -->
-            <div class="relative w-full" id="mobileSearchWrapper">
-                <div class="relative group">
-                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </div>
-                    <input
-                        type="text"
-                        id="mobileSearchInput"
-                        placeholder="Search products..."
-                        autocomplete="off"
-                        class="w-full pl-12 pr-16 py-3 bg-gray-50 border-2 border-gray-200 rounded-full text-gray-700 placeholder-gray-400 focus:outline-none focus:bg-white focus:border-secondary focus:ring-4 focus:ring-secondary/20 transition-all duration-300"
-                    >
-                    <button onclick="doMobileSearch()" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-secondary to-red-700 text-white p-2 rounded-full hover:shadow-lg transition-all">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </button>
-                </div>
-                <!-- Mobile Dropdown Results -->
-                <div id="mobileSearchDropdown"
-                     class="hidden absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl z-[9999] overflow-hidden"
-                     style="box-shadow: 0 20px 60px rgba(0,0,0,0.15); border: 1px solid #e8edf5; max-height: 380px; overflow-y: auto;">
-                </div>
-            </div>
-
-            <a href="index.php" class="block text-gray-700 hover:text-secondary font-semibold transition">Home</a>
-
-            <!-- Mobile About Dropdown -->
-            <div>
-                <button id="mobileAboutBtn" class="w-full text-left text-gray-700 hover:text-secondary font-semibold transition flex items-center justify-between">
-                    <span>About</span>
-                    <svg id="mobileAboutIcon" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                <div id="mobileAboutMenu" class="hidden mt-2 ml-4 space-y-2 border-l-2 border-secondary/30 pl-4">
-                    <a href="documentation.php"     class="block text-gray-600 hover:text-secondary font-medium transition py-1">📄 Documentation</a>
-                    <a href="industry-we-serve.php"  class="block text-gray-600 hover:text-secondary font-medium transition py-1">🏭 Industry We Serve</a>
-                    <a href="why-itc.php"            class="block text-gray-600 hover:text-secondary font-medium transition py-1">⭐ Why ITC</a>
-                    <a href="mission-vision.php"     class="block text-gray-600 hover:text-secondary font-medium transition py-1">👁️ Mission & Vision</a>
-                </div>
-            </div>
-
-            <a href="products.php" class="block text-gray-700 hover:text-secondary font-semibold transition">Products</a>
-            <a href="contact.php"  class="block text-gray-700 hover:text-secondary font-semibold transition">Contact</a>
-
-            <button onclick="openQuoteModal()" class="w-full bg-gradient-to-r from-secondary to-red-700 text-white px-6 py-2 rounded-lg font-bold hover:from-red-700 hover:to-secondary transition-all shadow-lg">
-                Get Quote
-            </button>
-        </div>
-    </nav>
-</header>
-
 <style>
 /* ===== SEARCH DROPDOWN STYLES ===== */
 .search-header-bar {
@@ -352,6 +196,162 @@
 
 mark.sh { background: #fef08a; color: #1e293b; padding: 0 2px; border-radius: 2px; }
 </style>
+<!-- Header Section -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+
+            <!-- Logo Section -->
+            <div class="flex items-center space-x-3 flex-shrink-0">
+                <img src="./assets/images/ITC LOGO.png" alt="Indian Traders Corp Logo" class="h-12 w-12">
+                <div>
+                    <h1 class="text-xl font-bold text-primary">Indian Traders Corp</h1>
+                    <p class="text-xs text-gray-600">Since 1969</p>
+                </div>
+            </div>
+
+            <!-- SEARCH BAR - DESKTOP -->
+            <div class="hidden lg:flex items-center flex-1 max-w-xl mx-8 relative" id="desktopSearchWrapper">
+                <div class="relative w-full group">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none z-10">
+                        <svg class="w-5 h-5 text-gray-400 group-focus-within:text-secondary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search for products, categories..."
+                        autocomplete="off"
+                        class="w-full pl-12 pr-24 py-3 bg-gray-50 border-2 border-gray-200 rounded-full text-gray-700 placeholder-gray-400 focus:outline-none focus:bg-white focus:border-secondary focus:ring-4 focus:ring-secondary/10 transition-all duration-300 ease-in-out"
+                    >
+                </div>
+
+                <!-- Desktop Dropdown Results — PROFESSIONAL ECOMMERCE STYLE -->
+                <div id="searchDropdown"
+                     class="hidden absolute top-full left-0 right-0 mt-3 bg-white rounded-2xl z-[9999] overflow-hidden"
+                     style="box-shadow: 0 20px 60px rgba(0,0,0,0.15); border: 1px solid #e8edf5;">
+                </div>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="index.php" class="text-gray-700 hover:text-secondary font-semibold transition">Home</a>
+
+                <!-- About Dropdown -->
+                <div class="relative group">
+                    <button class="text-gray-700 hover:text-secondary font-semibold transition flex items-center space-x-1">
+                        <span>About</span>
+                        <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2 z-50">
+                        <div class="py-2">
+                            <a href="documentation.php" class="block px-6 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-secondary/10 hover:to-red-50 hover:text-secondary font-medium transition-all border-l-4 border-transparent hover:border-secondary">
+                                <div class="flex items-center space-x-3">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                    <span>Documentation</span>
+                                </div>
+                            </a>
+                            <a href="industry-we-serve.php" class="block px-6 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-secondary/10 hover:to-red-50 hover:text-secondary font-medium transition-all border-l-4 border-transparent hover:border-secondary">
+                                <div class="flex items-center space-x-3">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                                    <span>Industry We Serve</span>
+                                </div>
+                            </a>
+                            <a href="why-itc.php" class="block px-6 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-secondary/10 hover:to-red-50 hover:text-secondary font-medium transition-all border-l-4 border-transparent hover:border-secondary">
+                                <div class="flex items-center space-x-3">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                                    <span>Why ITC</span>
+                                </div>
+                            </a>
+                            <a href="mission-vision.php" class="block px-6 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-secondary/10 hover:to-red-50 hover:text-secondary font-medium transition-all border-l-4 border-transparent hover:border-secondary rounded-b-lg">
+                                <div class="flex items-center space-x-3">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                    <span>Mission & Vision</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="products.php" class="text-gray-700 hover:text-secondary font-semibold transition">Products</a>
+                <a href="contact.php"  class="text-gray-700 hover:text-secondary font-semibold transition">Contact</a>
+
+                <button onclick="openQuoteModal()" class="bg-gradient-to-r from-secondary to-red-700 text-white px-6 py-2 rounded-lg font-bold hover:from-red-700 hover:to-secondary transition-all transform hover:scale-105 shadow-lg">
+                    Get Quote
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-4">
+
+            <!-- Mobile Search Bar -->
+            <div class="relative w-full" id="mobileSearchWrapper">
+                <div class="relative group">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                    <input
+                        type="text"
+                        id="mobileSearchInput"
+                        placeholder="Search products..."
+                        autocomplete="off"
+                        class="w-full pl-12 pr-16 py-3 bg-gray-50 border-2 border-gray-200 rounded-full text-gray-700 placeholder-gray-400 focus:outline-none focus:bg-white focus:border-secondary focus:ring-4 focus:ring-secondary/20 transition-all duration-300"
+                    >
+                    <button onclick="doMobileSearch()" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-secondary to-red-700 text-white p-2 rounded-full hover:shadow-lg transition-all">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Mobile Dropdown Results -->
+                <div id="mobileSearchDropdown"
+                     class="hidden absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl z-[9999] overflow-hidden"
+                     style="box-shadow: 0 20px 60px rgba(0,0,0,0.15); border: 1px solid #e8edf5; max-height: 380px; overflow-y: auto;">
+                </div>
+            </div>
+
+            <a href="index.php" class="block text-gray-700 hover:text-secondary font-semibold transition">Home</a>
+
+            <!-- Mobile About Dropdown -->
+            <div>
+                <button id="mobileAboutBtn" class="w-full text-left text-gray-700 hover:text-secondary font-semibold transition flex items-center justify-between">
+                    <span>About</span>
+                    <svg id="mobileAboutIcon" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div id="mobileAboutMenu" class="hidden mt-2 ml-4 space-y-2 border-l-2 border-secondary/30 pl-4">
+                    <a href="documentation.php"     class="block text-gray-600 hover:text-secondary font-medium transition py-1">📄 Documentation</a>
+                    <a href="industry-we-serve.php"  class="block text-gray-600 hover:text-secondary font-medium transition py-1">🏭 Industry We Serve</a>
+                    <a href="why-itc.php"            class="block text-gray-600 hover:text-secondary font-medium transition py-1">⭐ Why ITC</a>
+                    <a href="mission-vision.php"     class="block text-gray-600 hover:text-secondary font-medium transition py-1">👁️ Mission & Vision</a>
+                </div>
+            </div>
+
+            <a href="products.php" class="block text-gray-700 hover:text-secondary font-semibold transition">Products</a>
+            <a href="contact.php"  class="block text-gray-700 hover:text-secondary font-semibold transition">Contact</a>
+
+            <button onclick="openQuoteModal()" class="w-full bg-gradient-to-r from-secondary to-red-700 text-white px-6 py-2 rounded-lg font-bold hover:from-red-700 hover:to-secondary transition-all shadow-lg">
+                Get Quote
+            </button>
+        </div>
+    </nav>
+</header>
+
+
 
 <!-- ============================================================
      SEARCH JS — works on ALL pages

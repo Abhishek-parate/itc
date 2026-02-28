@@ -56,31 +56,7 @@
                 background-position: -200% 0;
             }
         }
-    </style>
-</head>
-<body class="bg-gray-50">
-<?php include 'assets/include/header.php'; ?>
-
-<!-- Include Modal -->
-<?php include 'assets/include/modal.php'; ?>
-
-<!-- Page Banner with Lazy Loading - WITH SKELETON -->
-<section class="page-banner" style="width: 100%; position: relative; overflow: hidden; margin: 0; padding: 0; background: #e5e7eb;">
-    <div style="position: relative; width: 100%; height: 100%;">
-        <!-- Skeleton Loader -->
-        <div class="skeleton banner-image" id="bannerSkeleton" style="width: 100%; height: 100%; display: block;"></div>
-        <!-- Actual Image -->
-        <img data-src="assets/images/crousel2.jpg" 
-             alt="Industries We Serve - Indian Traders Corp" 
-             class="banner-image"
-             id="bannerImage"
-             style="width: 100%; height: 100%; display: none; position: absolute; top: 0; left: 0;">
-    </div>
-</section>
-
-<!-- Responsive Banner CSS -->
-<style>
-    .page-banner {
+         .page-banner {
         height: 220px;
     }
 
@@ -109,7 +85,29 @@
             height: 550px;
         }
     }
-</style>
+    </style>
+</head>
+<body class="bg-gray-50">
+<?php include 'assets/include/header.php'; ?>
+
+<!-- Include Modal -->
+<?php include 'assets/include/modal.php'; ?>
+
+<!-- Page Banner with Lazy Loading - WITH SKELETON -->
+<section class="page-banner" style="width: 100%; position: relative; overflow: hidden; margin: 0; padding: 0; background: #e5e7eb;">
+    <div style="position: relative; width: 100%; height: 100%;">
+        <!-- Skeleton Loader -->
+        <div class="skeleton banner-image" id="bannerSkeleton" style="width: 100%; height: 100%; display: block;"></div>
+        <!-- Actual Image -->
+        <img data-src="assets/images/crousel2.jpg" 
+             alt="Industries We Serve - Indian Traders Corp" 
+             class="banner-image"
+             id="bannerImage"
+             style="width: 100%; height: 100%; display: none; position: absolute; top: 0; left: 0;">
+    </div>
+</section>
+
+
 
 <!-- Industries Overview Section -->
 <section class="py-16 bg-white lazy-load">
