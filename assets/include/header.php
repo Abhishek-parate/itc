@@ -1,12 +1,7 @@
 <?php
-/**
- * Header Component - Indian Traders Corp
- * Live Search reads from localStorage('itc_products') or fetches products.json
- * Search dropdown → product_details.php?slug= (DB se data fetch hoga)
- */
 ?>
 <style>
-/* ===== SEARCH DROPDOWN STYLES ===== */
+
 .search-header-bar {
     display: flex;
     align-items: center;
@@ -196,12 +191,11 @@
 
 mark.sh { background: #fef08a; color: #1e293b; padding: 0 2px; border-radius: 2px; }
 </style>
-<!-- Header Section -->
+
 <header class="bg-white shadow-md sticky top-0 z-50">
-    <nav class="container mx-auto px-4 py-4">
+    <nav class="container mx-auto px-4 py-4 relative">
         <div class="flex items-center justify-between">
 
-            <!-- Logo Section -->
             <div class="flex items-center space-x-3 flex-shrink-0">
                 <img src="./assets/images/ITC LOGO.png" alt="Indian Traders Corp Logo" class="h-12 w-12">
                 <div>
@@ -210,7 +204,6 @@ mark.sh { background: #fef08a; color: #1e293b; padding: 0 2px; border-radius: 2p
                 </div>
             </div>
 
-            <!-- SEARCH BAR - DESKTOP -->
             <div class="hidden lg:flex items-center flex-1 max-w-xl mx-8 relative" id="desktopSearchWrapper">
                 <div class="relative w-full group">
                     <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none z-10">
@@ -227,18 +220,15 @@ mark.sh { background: #fef08a; color: #1e293b; padding: 0 2px; border-radius: 2p
                     >
                 </div>
 
-                <!-- Desktop Dropdown Results — PROFESSIONAL ECOMMERCE STYLE -->
                 <div id="searchDropdown"
                      class="hidden absolute top-full left-0 right-0 mt-3 bg-white rounded-2xl z-[9999] overflow-hidden"
                      style="box-shadow: 0 20px 60px rgba(0,0,0,0.15); border: 1px solid #e8edf5;">
                 </div>
             </div>
 
-            <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-6">
                 <a href="index.php" class="text-gray-700 hover:text-secondary font-semibold transition">Home</a>
 
-                <!-- About Dropdown -->
                 <div class="relative group">
                     <button class="text-gray-700 hover:text-secondary font-semibold transition flex items-center space-x-1">
                         <span>About</span>
@@ -269,7 +259,7 @@ mark.sh { background: #fef08a; color: #1e293b; padding: 0 2px; border-radius: 2p
                             <a href="mission-vision.php" class="block px-6 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-secondary/10 hover:to-red-50 hover:text-secondary font-medium transition-all border-l-4 border-transparent hover:border-secondary rounded-b-lg">
                                 <div class="flex items-center space-x-3">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                                    <span>Mission & Vision</span>
+                                    <span>Mission &amp; Vision</span>
                                 </div>
                             </a>
                         </div>
@@ -284,7 +274,6 @@ mark.sh { background: #fef08a; color: #1e293b; padding: 0 2px; border-radius: 2p
                 </button>
             </div>
 
-            <!-- Mobile Menu Button -->
             <button id="mobileMenuBtn" class="md:hidden text-gray-700 focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -292,10 +281,8 @@ mark.sh { background: #fef08a; color: #1e293b; padding: 0 2px; border-radius: 2p
             </button>
         </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-4">
+        <div id="mobileMenu" class="hidden md:hidden absolute left-0 right-0 bg-white shadow-xl border-t border-gray-100 px-4 py-4 space-y-4 z-50" style="top: 100%;">
 
-            <!-- Mobile Search Bar -->
             <div class="relative w-full" id="mobileSearchWrapper">
                 <div class="relative group">
                     <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -308,15 +295,9 @@ mark.sh { background: #fef08a; color: #1e293b; padding: 0 2px; border-radius: 2p
                         id="mobileSearchInput"
                         placeholder="Search products..."
                         autocomplete="off"
-                        class="w-full pl-12 pr-16 py-3 bg-gray-50 border-2 border-gray-200 rounded-full text-gray-700 placeholder-gray-400 focus:outline-none focus:bg-white focus:border-secondary focus:ring-4 focus:ring-secondary/20 transition-all duration-300"
+                        class="w-full pl-12 pr-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-full text-gray-700 placeholder-gray-400 focus:outline-none focus:bg-white focus:border-secondary focus:ring-4 focus:ring-secondary/20 transition-all duration-300"
                     >
-                    <button onclick="doMobileSearch()" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-secondary to-red-700 text-white p-2 rounded-full hover:shadow-lg transition-all">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </button>
                 </div>
-                <!-- Mobile Dropdown Results -->
                 <div id="mobileSearchDropdown"
                      class="hidden absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl z-[9999] overflow-hidden"
                      style="box-shadow: 0 20px 60px rgba(0,0,0,0.15); border: 1px solid #e8edf5; max-height: 380px; overflow-y: auto;">
@@ -325,7 +306,6 @@ mark.sh { background: #fef08a; color: #1e293b; padding: 0 2px; border-radius: 2p
 
             <a href="index.php" class="block text-gray-700 hover:text-secondary font-semibold transition">Home</a>
 
-            <!-- Mobile About Dropdown -->
             <div>
                 <button id="mobileAboutBtn" class="w-full text-left text-gray-700 hover:text-secondary font-semibold transition flex items-center justify-between">
                     <span>About</span>
@@ -333,11 +313,25 @@ mark.sh { background: #fef08a; color: #1e293b; padding: 0 2px; border-radius: 2p
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
                 </button>
-                <div id="mobileAboutMenu" class="hidden mt-2 ml-4 space-y-2 border-l-2 border-secondary/30 pl-4">
-                    <a href="documentation.php"     class="block text-gray-600 hover:text-secondary font-medium transition py-1">📄 Documentation</a>
-                    <a href="industry-we-serve.php"  class="block text-gray-600 hover:text-secondary font-medium transition py-1">🏭 Industry We Serve</a>
-                    <a href="why-itc.php"            class="block text-gray-600 hover:text-secondary font-medium transition py-1">⭐ Why ITC</a>
-                    <a href="mission-vision.php"     class="block text-gray-600 hover:text-secondary font-medium transition py-1">👁️ Mission & Vision</a>
+                <div id="mobileAboutMenu" class="hidden mt-1 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden">
+                    <div class="py-2">
+                        <a href="documentation.php" class="flex items-center space-x-3 px-6 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-secondary/10 hover:to-red-50 hover:text-secondary font-medium transition-all border-l-4 border-transparent hover:border-secondary">
+                            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            <span>Documentation</span>
+                        </a>
+                        <a href="industry-we-serve.php" class="flex items-center space-x-3 px-6 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-secondary/10 hover:to-red-50 hover:text-secondary font-medium transition-all border-l-4 border-transparent hover:border-secondary">
+                            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                            <span>Industry We Serve</span>
+                        </a>
+                        <a href="why-itc.php" class="flex items-center space-x-3 px-6 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-secondary/10 hover:to-red-50 hover:text-secondary font-medium transition-all border-l-4 border-transparent hover:border-secondary">
+                            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                            <span>Why ITC</span>
+                        </a>
+                        <a href="mission-vision.php" class="flex items-center space-x-3 px-6 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-secondary/10 hover:to-red-50 hover:text-secondary font-medium transition-all border-l-4 border-transparent hover:border-secondary">
+                            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                            <span>Mission &amp; Vision</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -351,22 +345,13 @@ mark.sh { background: #fef08a; color: #1e293b; padding: 0 2px; border-radius: 2p
     </nav>
 </header>
 
-
-
-<!-- ============================================================
-     SEARCH JS — works on ALL pages
-     ✅ FIX: goToProductFromSearch → product_details.php?slug=
-     ============================================================ -->
 <script>
 var searchProducts = [];
 var searchLoaded   = false;
 
-// 1. Load products data — SEEDHA DB SE via API (products.json hatao!)
-// Slug DB se aayega → redirect 100% correct product pe hoga
 function loadSearchData() {
     if (searchLoaded) return;
 
-    // 30 min cache check
     try {
         var ts     = localStorage.getItem('itc_db_ts');
         var cached = localStorage.getItem('itc_db_products');
@@ -377,7 +362,6 @@ function loadSearchData() {
         }
     } catch(e) {}
 
-    // Fetch from DB API — slug DB se aayega, id mismatch nahi hoga
     fetch('./api/get_products.php')
         .then(function(r) {
             if (!r.ok) throw new Error('API error: ' + r.status);
@@ -385,22 +369,17 @@ function loadSearchData() {
         })
         .then(function(data) {
             var products = (data && data.products) ? data.products : data;
-            if (!Array.isArray(products) || products.length === 0) {
-                console.warn('Search: empty/invalid API response');
-                return;
-            }
+            if (!Array.isArray(products) || products.length === 0) return;
             searchProducts = products;
             searchLoaded   = true;
             try {
                 localStorage.setItem('itc_db_products', JSON.stringify(products));
                 localStorage.setItem('itc_db_ts', Date.now().toString());
             } catch(e) {}
-            console.log('✅ Search: ' + products.length + ' products loaded from DB');
         })
         .catch(function(e) { console.warn('Search API failed:', e); });
 }
 
-// 2. Filter function
 function doFilter(query) {
     if (!query || query.trim().length < 2) return [];
     var q = query.toLowerCase().trim();
@@ -413,7 +392,6 @@ function doFilter(query) {
     }).slice(0, 6);
 }
 
-// 3. Highlight matching text
 function hlText(text, query) {
     if (!text || !query) return text || '';
     var safe = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -421,7 +399,6 @@ function hlText(text, query) {
         '<mark class="sh">$1</mark>');
 }
 
-// 4. ✅ FIXED: Navigate to cart.php via slug (yahi tera product detail page hai)
 function goToProductFromSearch(id) {
     closeAllDropdowns();
     var p = searchProducts.find(function(x){ return x.id === id; });
@@ -433,12 +410,10 @@ function goToProductFromSearch(id) {
     }
 }
 
-// 5. Render PROFESSIONAL dropdown
 function renderDropdown(results, query, dropdownId) {
     var dd = document.getElementById(dropdownId);
     if (!dd) return;
 
-    // NO RESULTS
     if (results.length === 0) {
         dd.innerHTML =
             '<div class="search-empty">' +
@@ -456,14 +431,12 @@ function renderDropdown(results, query, dropdownId) {
         return;
     }
 
-    // HEADER BAR
     var html =
         '<div class="search-header-bar">' +
         '<span>' + results.length + ' Product' + (results.length !== 1 ? 's' : '') + ' Found</span>' +
         '<a href="product_details.php">View All Products <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>' +
         '</div>';
 
-    // PRODUCT ROWS
     results.forEach(function(p) {
         var rawPrice = p.price_min || p.price || 0;
         var priceStr = '₹' + Number(rawPrice).toLocaleString('en-IN');
@@ -472,37 +445,25 @@ function renderDropdown(results, query, dropdownId) {
             ? '<span class="search-item-badge">✓ In Stock</span>'
             : '<span class="search-item-badge out">Out of Stock</span>';
         var imgSrc = p.image || './assets/images/Gate-Valve-1.png';
-        var slug   = p.slug ? encodeURIComponent(p.slug) : '';
-        var href   = slug
-            ? 'product_details.php?slug=' + slug
-            : 'product_details.php?id=' + p.id;
 
         html +=
             '<div class="search-item" onclick="goToProductFromSearch(' + p.id + ')">' +
-
-            /* IMAGE */
             '<div class="search-item-img-wrap">' +
             '<img src="' + imgSrc + '" alt="' + p.name + '" loading="lazy" onerror="this.src=\'./assets/images/Gate-Valve-1.png\'">' +
             '</div>' +
-
-            /* INFO */
             '<div class="search-item-body">' +
             '<div class="search-item-category">' + (p.category || '') + '</div>' +
             '<div class="search-item-name">'     + hlText(p.name,     query) + '</div>' +
             '<div class="search-item-sub">'      + hlText(p.subtitle || '', query) + '</div>' +
             '</div>' +
-
-            /* PRICE + BADGE */
             '<div class="search-item-right">' +
             '<div class="search-item-price">' + priceStr + '</div>' +
             '<div class="search-item-unit">per piece</div>' +
             stockBadge +
             '</div>' +
-
             '</div>';
     });
 
-    // FOOTER
     html +=
         '<div class="search-footer">' +
         '<span class="search-footer-left">' +
@@ -519,7 +480,6 @@ function renderDropdown(results, query, dropdownId) {
     dd.classList.remove('hidden');
 }
 
-// 6. Quick search from empty state tags
 function quickSearch(term) {
     var di = document.getElementById('searchInput');
     var mi = document.getElementById('mobileSearchInput');
@@ -527,7 +487,6 @@ function quickSearch(term) {
     if (mi) { mi.value = term; renderDropdown(doFilter(term), term, 'mobileSearchDropdown'); }
 }
 
-// 7. Close all dropdowns
 function closeAllDropdowns() {
     var d1 = document.getElementById('searchDropdown');
     var d2 = document.getElementById('mobileSearchDropdown');
@@ -535,7 +494,6 @@ function closeAllDropdowns() {
     if (d2) d2.classList.add('hidden');
 }
 
-// 8. Go to products page with search param
 function doSearchWithQuery(encodedQuery) {
     closeAllDropdowns();
     window.location.href = 'product_details.php?search=' + encodedQuery;
@@ -557,7 +515,6 @@ function doMobileSearch() {
     window.location.href = 'cart.php?search=' + encodeURIComponent(q);
 }
 
-// 9. Desktop input events
 (function() {
     var timer;
     var inp = document.getElementById('searchInput');
@@ -584,7 +541,6 @@ function doMobileSearch() {
     });
 })();
 
-// 10. Mobile input events
 (function() {
     var timer;
     var inp = document.getElementById('mobileSearchInput');
@@ -615,7 +571,6 @@ function doMobileSearch() {
     });
 })();
 
-// 11. Click outside → close dropdown
 document.addEventListener('click', function(e) {
     var dw = document.getElementById('desktopSearchWrapper');
     var mw = document.getElementById('mobileSearchWrapper');
@@ -629,7 +584,6 @@ document.addEventListener('click', function(e) {
     }
 });
 
-// 12. products.php pe ?search= param handle karo
 function handleSearchParam() {
     var params = new URLSearchParams(window.location.search);
     var q = params.get('search');
@@ -652,7 +606,6 @@ function handleSearchParam() {
     }, 100);
 }
 
-// 13. Filter and re-render product grid on products.php
 function applySearchFilter(q, ap) {
     var query = q.toLowerCase().trim();
     var results = ap.filter(function(p) {
@@ -690,7 +643,6 @@ function applySearchFilter(q, ap) {
     }
 }
 
-// 14. Mobile menu toggle
 var mbBtn = document.getElementById('mobileMenuBtn');
 if (mbBtn) {
     mbBtn.addEventListener('click', function() {
@@ -698,7 +650,6 @@ if (mbBtn) {
     });
 }
 
-// 15. Mobile About dropdown toggle
 var abBtn = document.getElementById('mobileAboutBtn');
 if (abBtn) {
     abBtn.addEventListener('click', function() {
@@ -707,7 +658,6 @@ if (abBtn) {
     });
 }
 
-// Init on load
 document.addEventListener('DOMContentLoaded', function() {
     loadSearchData();
     handleSearchParam();

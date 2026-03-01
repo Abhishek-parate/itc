@@ -135,13 +135,16 @@ function renderCard($p) {
             }
         }
     </script>
+    <style>
+        .tabs-scroll::-webkit-scrollbar { display: none; }
+        .tabs-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
 </head>
 <body class="bg-gray-50">
 
 <?php include 'assets/include/header.php'; ?>
 <?php include 'assets/include/modal.php'; ?>
 
-<!-- HERO -->
 <section class="relative bg-secondary overflow-hidden flex items-center" style="min-height:500px;">
     <div class="container mx-auto px-4 py-20 relative z-10">
         <div class="max-w-5xl mx-auto text-center">
@@ -173,19 +176,19 @@ function renderCard($p) {
 
 <!-- FILTER BAR -->
 <section class="sticky top-0 z-40 bg-white shadow-lg border-b-2 border-gray-200">
-    <div class="container mx-auto px-4 py-6">
-        <div class="flex flex-wrap justify-center gap-3">
+    <div class="container mx-auto px-4 py-4 md:py-6">
+        <div class="tabs-scroll flex flex-nowrap md:flex-wrap md:justify-center gap-3 overflow-x-auto" style="-webkit-overflow-scrolling: touch;">
             <button id="btn-all"
-                    class="px-6 py-3 rounded-xl font-bold text-sm bg-secondary text-white shadow-lg"
+                    class="flex-shrink-0 px-6 py-3 rounded-xl font-bold text-sm bg-secondary text-white shadow-lg whitespace-nowrap"
                     onclick="filterProducts('all')">All Products</button>
             <button id="btn-valves"
-                    class="px-6 py-3 rounded-xl font-bold text-sm bg-white text-secondary border-2 border-gray-300 shadow-md"
+                    class="flex-shrink-0 px-6 py-3 rounded-xl font-bold text-sm bg-white text-secondary border-2 border-gray-300 shadow-md whitespace-nowrap"
                     onclick="filterProducts('valves')">Gate / Globe Valves</button>
             <button id="btn-ball"
-                    class="px-6 py-3 rounded-xl font-bold text-sm bg-white text-secondary border-2 border-gray-300 shadow-md"
+                    class="flex-shrink-0 px-6 py-3 rounded-xl font-bold text-sm bg-white text-secondary border-2 border-gray-300 shadow-md whitespace-nowrap"
                     onclick="filterProducts('ball')">Ball / Check Valves</button>
             <button id="btn-pipes"
-                    class="px-6 py-3 rounded-xl font-bold text-sm bg-white text-secondary border-2 border-gray-300 shadow-md"
+                    class="flex-shrink-0 px-6 py-3 rounded-xl font-bold text-sm bg-white text-secondary border-2 border-gray-300 shadow-md whitespace-nowrap"
                     onclick="filterProducts('pipes')">Pipes &amp; Fittings</button>
         </div>
     </div>
