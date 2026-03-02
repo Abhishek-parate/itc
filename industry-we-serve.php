@@ -60,10 +60,12 @@
         height: 220px;
     }
 
-    .banner-image {
-        object-fit: contain;
-        object-position: center;
-    }
+    .banner-img {
+    width: 100%;
+    height: auto;         
+    object-fit: fill;   
+    display: block;
+}
 
     @media (min-width: 640px) {
         .page-banner {

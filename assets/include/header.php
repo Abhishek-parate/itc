@@ -269,7 +269,7 @@ mark.sh { background: #fef08a; color: #1e293b; padding: 0 2px; border-radius: 2p
                 <a href="products.php" class="text-gray-700 hover:text-secondary font-semibold transition">Products</a>
                 <a href="contact.php"  class="text-gray-700 hover:text-secondary font-semibold transition">Contact</a>
 
-                <button onclick="openQuoteModal()" class="bg-gradient-to-r from-secondary to-red-700 text-white px-6 py-2 rounded-lg font-bold hover:from-red-700 hover:to-secondary transition-all transform hover:scale-105 shadow-lg">
+                <button onclick="openQuoteModal()" class="bg-red-700 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-800 transition-all transform hover:scale-105 shadow-lg">
                     Get Quote
                 </button>
             </div>
@@ -338,7 +338,7 @@ mark.sh { background: #fef08a; color: #1e293b; padding: 0 2px; border-radius: 2p
             <a href="products.php" class="block text-gray-700 hover:text-secondary font-semibold transition">Products</a>
             <a href="contact.php"  class="block text-gray-700 hover:text-secondary font-semibold transition">Contact</a>
 
-            <button onclick="openQuoteModal()" class="w-full bg-gradient-to-r from-secondary to-red-700 text-white px-6 py-2 rounded-lg font-bold hover:from-red-700 hover:to-secondary transition-all shadow-lg">
+            <button onclick="openQuoteModal()" class="w-full bg-red-700 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-800 transition-all shadow-lg">
                 Get Quote
             </button>
         </div>

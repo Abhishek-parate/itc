@@ -44,89 +44,25 @@
 
     </script>
     <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-
-<body class="bg-gray-50">
-
-<!-- ============================================================ -->
-<!-- RESPONSIVE BANNER - PERFECT FOR ALL DEVICES                 -->
-<!-- Mobile: Shows complete image | Desktop: Fills beautifully   -->
-<!-- ============================================================ -->
-
-<?php include 'assets/include/header.php'; ?>
-
-<?php include 'assets/include/modal.php'; ?>
-
-<!-- Responsive Banner Section -->
-<section class="banner-section" style="width: 100%; position: relative; overflow: hidden; margin: 0; padding: 0; background: #e5e7eb;">
-
-    <!-- Slides Container -->
-    <div style="position: relative; width: 100%; height: 100%;">
-
-        <!-- Slide 1 - NO lazy loading for first visible slide -->
-        <div class="banner-slide active" style="position: absolute; width: 100%; height: 100%; opacity: 1; transition: opacity 1s ease;">
-            <img src="assets/images/crousel1.jpg" alt="Industrial Products" class="banner-img">
-        </div>
-
-        <!-- Slide 2 - WITH lazy loading -->
-        <div class="banner-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease;">
-            <img src="assets/images/crousel2.jpg" alt="Industrial Products" class="banner-img" loading="lazy">
-        </div>
-
-        <!-- Slide 3 - WITH lazy loading -->
-        <div class="banner-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease;">
-            <img src="assets/images/crousel3.jpg" alt="Industrial Products" class="banner-img" loading="lazy">
-        </div>
-
-        <!-- Slide 4 - WITH lazy loading -->
-        <div class="banner-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease;">
-            <img src="assets/images/crousel4.jpg" alt="Industrial Products" class="banner-img" loading="lazy">
-        </div>
-
-        <!-- Slide 5 - WITH lazy loading -->
-        <div class="banner-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease;">
-            <img src="assets/images/crousel5.jpg" alt="Industrial Products" class="banner-img" loading="lazy">
-        </div>
-
-        <!-- Slide 6 - WITH lazy loading -->
-        <div class="banner-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease;">
-            <img src="assets/images/crousel6.jpg" alt="Industrial Products" class="banner-img" loading="lazy">
-        </div>
-    </div>
-
-    <!-- Navigation Arrows -->
-    <button onclick="bannerPrev()" class="banner-arrow banner-arrow-left" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9); border: none; border-radius: 50%; cursor: pointer; z-index: 10; transition: all 0.3s; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
-        <svg style="display: block;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
-        </svg>
-    </button>
-
-    <button onclick="bannerNext()" class="banner-arrow banner-arrow-right" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9); border: none; border-radius: 50%; cursor: pointer; z-index: 10; transition: all 0.3s; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
-        <svg style="display: block;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
-        </svg>
-    </button>
-
-    <!-- Slide Indicators -->
-    <div class="banner-dots" style="position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 10;">
-        <span class="banner-dot" onclick="bannerGoTo(0)" style="cursor: pointer; border-radius: 50%; background: white; transition: all 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.3); opacity: 1;"></span>
-        <span class="banner-dot" onclick="bannerGoTo(1)" style="cursor: pointer; border-radius: 50%; background: white; transition: all 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.3); opacity: 0.5;"></span>
-        <span class="banner-dot" onclick="bannerGoTo(2)" style="cursor: pointer; border-radius: 50%; background: white; transition: all 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.3); opacity: 0.5;"></span>
-        <span class="banner-dot" onclick="bannerGoTo(3)" style="cursor: pointer; border-radius: 50%; background: white; transition: all 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.3); opacity: 0.5;"></span>
-        <span class="banner-dot" onclick="bannerGoTo(4)" style="cursor: pointer; border-radius: 50%; background: white; transition: all 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.3); opacity: 0.5;"></span>
-        <span class="banner-dot" onclick="bannerGoTo(5)" style="cursor: pointer; border-radius: 50%; background: white; transition: all 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.3); opacity: 0.5;"></span>
-        <span class="banner-dot" onclick="bannerGoTo(6)" style="cursor: pointer; border-radius: 50%; background: white; transition: all 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.3); opacity: 0.5;"></span>
-    </div>
-</section>
-
-<!-- ============================================================ -->
-<!-- RESPONSIVE BANNER CSS - ADAPTS TO ALL SCREEN SIZES          -->
-<!-- ============================================================ -->
-<style>
-    /* Base banner styles */
-    .banner-section {
-        height: 220px; /* Default mobile */
+    <style>
+           @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
     }
+
+    .animate-scroll {
+        animation: scroll 40s linear infinite;
+    }
+
+    .brands-track:hover .animate-scroll {
+        animation-play-state: paused;
+    }
+         /* Base banner styles */
+   .banner-section {
+    height: auto; /* Default mobile */
+    min-height: 150px;
+}
+
 
     .banner-slide {
         position: absolute !important;
@@ -141,15 +77,13 @@
         z-index: 1 !important;
     }
 
-    /* Mobile: Show complete image with contain */
-    .banner-img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain; /* Shows complete image on mobile */
-        object-position: center;
-        display: block;
-    }
-
+   .banner-img {
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    object-position: center;
+    display: block;
+}
     /* Arrow buttons - mobile size */
     .banner-arrow {
         width: 35px;
@@ -292,74 +226,109 @@
             transform: translateY(0);
         }
     }
+/* Review Carousel Responsive Styles */
+@media (max-width: 767px) {
+    .review-carousel-track {
+        display: flex;
+    }
+    .review-card {
+        width: 100% !important;
+        flex-shrink: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .review-carousel-track {
+        display: flex;
+    }
+    .review-card {
+        width: 33.333333% !important;
+        flex-shrink: 0;
+    }
+}
 </style>
+</head>
+
+<body class="bg-gray-50">
+
+<!-- ============================================================ -->
+<!-- RESPONSIVE BANNER - PERFECT FOR ALL DEVICES                 -->
+<!-- Mobile: Shows complete image | Desktop: Fills beautifully   -->
+<!-- ============================================================ -->
+
+<?php include 'assets/include/header.php'; ?>
+
+<?php include 'assets/include/modal.php'; ?>
+
+<!-- Responsive Banner Section -->
+<section class="banner-section" style="width: 100%; position: relative; overflow: hidden; margin: 0; padding: 0;">
+    <!-- Slides Container -->
+    <div style="position: relative; width: 100%; height: 100%;">
+
+        <!-- Slide 1 - NO lazy loading for first visible slide -->
+        <div class="banner-slide active" style="position: absolute; width: 100%; height: 100%; opacity: 1; transition: opacity 1s ease;">
+            <img src="assets/images/crousel1.jpg" alt="Industrial Products" class="banner-img">
+        </div>
+
+        <!-- Slide 2 - WITH lazy loading -->
+        <div class="banner-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease;">
+            <img src="assets/images/crousel2.jpg" alt="Industrial Products" class="banner-img" loading="lazy">
+        </div>
+
+        <!-- Slide 3 - WITH lazy loading -->
+        <div class="banner-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease;">
+            <img src="assets/images/crousel3.jpg" alt="Industrial Products" class="banner-img" loading="lazy">
+        </div>
+
+        <!-- Slide 4 - WITH lazy loading -->
+        <div class="banner-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease;">
+            <img src="assets/images/crousel4.jpg" alt="Industrial Products" class="banner-img" loading="lazy">
+        </div>
+
+        <!-- Slide 5 - WITH lazy loading -->
+        <div class="banner-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease;">
+            <img src="assets/images/crousel5.jpg" alt="Industrial Products" class="banner-img" loading="lazy">
+        </div>
+
+        <!-- Slide 6 - WITH lazy loading -->
+        <div class="banner-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease;">
+            <img src="assets/images/crousel6.jpg" alt="Industrial Products" class="banner-img" loading="lazy">
+        </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button onclick="bannerPrev()" class="banner-arrow banner-arrow-left" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9); border: none; border-radius: 50%; cursor: pointer; z-index: 10; transition: all 0.3s; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+        <svg style="display: block;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
+        </svg>
+    </button>
+
+    <button onclick="bannerNext()" class="banner-arrow banner-arrow-right" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9); border: none; border-radius: 50%; cursor: pointer; z-index: 10; transition: all 0.3s; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+        <svg style="display: block;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+        </svg>
+    </button>
+
+    <!-- Slide Indicators -->
+    <div class="banner-dots" style="position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 10;">
+        <span class="banner-dot" onclick="bannerGoTo(0)" style="cursor: pointer; border-radius: 50%; background: white; transition: all 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.3); opacity: 1;"></span>
+        <span class="banner-dot" onclick="bannerGoTo(1)" style="cursor: pointer; border-radius: 50%; background: white; transition: all 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.3); opacity: 0.5;"></span>
+        <span class="banner-dot" onclick="bannerGoTo(2)" style="cursor: pointer; border-radius: 50%; background: white; transition: all 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.3); opacity: 0.5;"></span>
+        <span class="banner-dot" onclick="bannerGoTo(3)" style="cursor: pointer; border-radius: 50%; background: white; transition: all 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.3); opacity: 0.5;"></span>
+        <span class="banner-dot" onclick="bannerGoTo(4)" style="cursor: pointer; border-radius: 50%; background: white; transition: all 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.3); opacity: 0.5;"></span>
+        <span class="banner-dot" onclick="bannerGoTo(5)" style="cursor: pointer; border-radius: 50%; background: white; transition: all 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.3); opacity: 0.5;"></span>
+        <span class="banner-dot" onclick="bannerGoTo(6)" style="cursor: pointer; border-radius: 50%; background: white; transition: all 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.3); opacity: 0.5;"></span>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- RESPONSIVE BANNER CSS - ADAPTS TO ALL SCREEN SIZES          -->
+<!-- ============================================================ -->
+
 
 <!-- ============================================================ -->
 <!-- BANNER JAVASCRIPT - SELF-CONTAINED                          -->
 <!-- ============================================================ -->
-<script>
-(function() {
-    let bannerCurrentSlide = 0;
-    const bannerSlides = document.querySelectorAll('.banner-slide');
-    const bannerDots = document.querySelectorAll('.banner-dot');
-    let bannerAutoInterval;
-
-    function bannerShow(index) {
-        // Hide all slides
-        bannerSlides.forEach(slide => {
-            slide.classList.remove('active');
-            slide.style.opacity = '0';
-        });
-
-        // Reset all dots
-        bannerDots.forEach(dot => {
-            dot.style.opacity = '0.5';
-        });
-
-        // Update index
-        bannerCurrentSlide = index;
-        if (bannerCurrentSlide >= bannerSlides.length) bannerCurrentSlide = 0;
-        if (bannerCurrentSlide < 0) bannerCurrentSlide = bannerSlides.length - 1;
-
-        // Show current slide
-        bannerSlides[bannerCurrentSlide].classList.add('active');
-        bannerSlides[bannerCurrentSlide].style.opacity = '1';
-        bannerDots[bannerCurrentSlide].style.opacity = '1';
-    }
-
-    window.bannerNext = function() {
-        bannerShow(bannerCurrentSlide + 1);
-        bannerResetAuto();
-    };
-
-    window.bannerPrev = function() {
-        bannerShow(bannerCurrentSlide - 1);
-        bannerResetAuto();
-    };
-
-    window.bannerGoTo = function(index) {
-        bannerShow(index);
-        bannerResetAuto();
-    };
-
-    function bannerStartAuto() {
-        bannerAutoInterval = setInterval(() => {
-            bannerShow(bannerCurrentSlide + 1);
-        }, 5000);
-    }
-
-    function bannerResetAuto() {
-        clearInterval(bannerAutoInterval);
-        bannerStartAuto();
-    }
-
-    // Initialize
-    bannerShow(0);
-    bannerStartAuto();
-
-    console.log('âœ“ Responsive banner initialized - ' + bannerSlides.length + ' slides');
-})();
-</script>
 
 <!-- Certification Ribbon - Mobile Responsive -->
 <section class="bg-white border-y-2 border-gray-200 py-6 sm:py-8 overflow-hidden">
@@ -746,32 +715,6 @@
     </div>
 </section>
 
-<!-- JavaScript for Product Loading -->
-<script>
-// Product Loading with Skeleton
-(function() {
-    // Simulate loading delay (remove this in production if data loads instantly)
-    setTimeout(function() {
-        // Hide skeleton
-        document.getElementById('productSkeleton').style.display = 'none';
-        
-        // Show actual products
-        document.getElementById('productGrid').style.display = 'grid';
-        
-        console.log('âœ“ Products loaded - 18 items (12 mobile, 18 desktop)');
-    }, 800); // 800ms loading time
-})();
-
-/**
- * Navigate to product details page
- * @param {string} productSlug - The product identifier (URL-friendly name)
- */
-function viewProduct(productSlug) {
-    window.location.href = 'product_details.php?product=' + productSlug;
-}
-</script>
-
-
 
 <!-- ============================================================ -->
 <!-- DIRECTOR'S MESSAGE SECTION                                   -->
@@ -981,20 +924,6 @@ function viewProduct(productSlug) {
     </div>
 </section>
 
-<style>
-    @keyframes scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-100%); }
-    }
-
-    .animate-scroll {
-        animation: scroll 40s linear infinite;
-    }
-
-    .brands-track:hover .animate-scroll {
-        animation-play-state: paused;
-    }
-</style>
 
 
 <!-- ============================================================ -->
@@ -1541,107 +1470,6 @@ function viewProduct(productSlug) {
     </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- REVIEW CAROUSEL JAVASCRIPT                                   -->
-<!-- ============================================================ -->
-<script>
-(function() {
-    let reviewCurrentIndex = 0;
-    const reviewTrack = document.querySelector('.review-carousel-track');
-    const reviewDots = document.querySelectorAll('.review-dot');
-    const reviewCards = document.querySelectorAll('.review-card');
-    let reviewCardsPerView = window.innerWidth >= 768 ? 3 : 1;
-    const totalReviews = reviewCards.length;
-    const maxIndex = Math.ceil(totalReviews / reviewCardsPerView) - 1;
-    let reviewAutoInterval;
-
-    function updateCardsPerView() {
-        reviewCardsPerView = window.innerWidth >= 768 ? 3 : 1;
-    }
-
-    function reviewShow(index) {
-        updateCardsPerView();
-        const maxIdx = Math.ceil(totalReviews / reviewCardsPerView) - 1;
-        
-        if (index > maxIdx) reviewCurrentIndex = 0;
-        else if (index < 0) reviewCurrentIndex = maxIdx;
-        else reviewCurrentIndex = index;
-
-        const offset = -(reviewCurrentIndex * (100 / reviewCardsPerView));
-        reviewTrack.style.transform = `translateX(${offset}%)`;
-
-        // Update dots
-        reviewDots.forEach((dot, i) => {
-            dot.classList.toggle('bg-primary', i === reviewCurrentIndex);
-            dot.classList.toggle('bg-gray-300', i !== reviewCurrentIndex);
-            dot.classList.toggle('w-8', i === reviewCurrentIndex);
-            dot.classList.toggle('w-2.5', i !== reviewCurrentIndex);
-        });
-    }
-
-    window.reviewNext = function() {
-        reviewShow(reviewCurrentIndex + 1);
-        reviewResetAuto();
-    };
-
-    window.reviewPrev = function() {
-        reviewShow(reviewCurrentIndex - 1);
-        reviewResetAuto();
-    };
-
-    window.reviewGoTo = function(index) {
-        reviewShow(index);
-        reviewResetAuto();
-    };
-
-    function reviewStartAuto() {
-        reviewAutoInterval = setInterval(() => {
-            reviewShow(reviewCurrentIndex + 1);
-        }, 5000);
-    }
-
-    function reviewResetAuto() {
-        clearInterval(reviewAutoInterval);
-        reviewStartAuto();
-    }
-
-    // Handle window resize
-    window.addEventListener('resize', () => {
-        reviewShow(reviewCurrentIndex);
-    });
-
-    // Initialize
-    reviewShow(0);
-    reviewStartAuto();
-
-    console.log('✓ Review carousel initialized - ' + totalReviews + ' reviews');
-})();
-</script>
-
-<style>
-/* Review Carousel Responsive Styles */
-@media (max-width: 767px) {
-    .review-carousel-track {
-        display: flex;
-    }
-    .review-card {
-        width: 100% !important;
-        flex-shrink: 0;
-    }
-}
-
-@media (min-width: 768px) {
-    .review-carousel-track {
-        display: flex;
-    }
-    .review-card {
-        width: 33.333333% !important;
-        flex-shrink: 0;
-    }
-}
-</style>
-
-
 
 <!-- ============================================================ -->
 <!-- BLOG SECTION - MODERN GRID LAYOUT                            -->
@@ -1869,6 +1697,172 @@ function viewProduct(productSlug) {
 <?php include 'assets/include/footer.php'; ?>
 
 <script src="./assets/js/main.js"></script>
+<script>
+(function() {
+    let bannerCurrentSlide = 0;
+    const bannerSlides = document.querySelectorAll('.banner-slide');
+    const bannerDots = document.querySelectorAll('.banner-dot');
+    let bannerAutoInterval;
+
+    function bannerShow(index) {
+        // Hide all slides
+        bannerSlides.forEach(slide => {
+            slide.classList.remove('active');
+            slide.style.opacity = '0';
+        });
+
+        // Reset all dots
+        bannerDots.forEach(dot => {
+            dot.style.opacity = '0.5';
+        });
+
+        // Update index
+        bannerCurrentSlide = index;
+        if (bannerCurrentSlide >= bannerSlides.length) bannerCurrentSlide = 0;
+        if (bannerCurrentSlide < 0) bannerCurrentSlide = bannerSlides.length - 1;
+
+        // Show current slide
+        bannerSlides[bannerCurrentSlide].classList.add('active');
+        bannerSlides[bannerCurrentSlide].style.opacity = '1';
+        bannerDots[bannerCurrentSlide].style.opacity = '1';
+    }
+
+    window.bannerNext = function() {
+        bannerShow(bannerCurrentSlide + 1);
+        bannerResetAuto();
+    };
+
+    window.bannerPrev = function() {
+        bannerShow(bannerCurrentSlide - 1);
+        bannerResetAuto();
+    };
+
+    window.bannerGoTo = function(index) {
+        bannerShow(index);
+        bannerResetAuto();
+    };
+
+    function bannerStartAuto() {
+        bannerAutoInterval = setInterval(() => {
+            bannerShow(bannerCurrentSlide + 1);
+        }, 5000);
+    }
+
+    function bannerResetAuto() {
+        clearInterval(bannerAutoInterval);
+        bannerStartAuto();
+    }
+
+    // Initialize
+    bannerShow(0);
+    bannerStartAuto();
+
+    console.log('âœ“ Responsive banner initialized - ' + bannerSlides.length + ' slides');
+})();
+</script>
+
+<!-- JavaScript for Product Loading -->
+<script>
+// Product Loading with Skeleton
+(function() {
+    // Simulate loading delay (remove this in production if data loads instantly)
+    setTimeout(function() {
+        // Hide skeleton
+        document.getElementById('productSkeleton').style.display = 'none';
+        
+        // Show actual products
+        document.getElementById('productGrid').style.display = 'grid';
+        
+        console.log('âœ“ Products loaded - 18 items (12 mobile, 18 desktop)');
+    }, 800); // 800ms loading time
+})();
+
+/**
+ * Navigate to product details page
+ * @param {string} productSlug - The product identifier (URL-friendly name)
+ */
+function viewProduct(productSlug) {
+    window.location.href = 'product_details.php?product=' + productSlug;
+}
+</script>
+<!-- ============================================================ -->
+<!-- REVIEW CAROUSEL JAVASCRIPT                                   -->
+<!-- ============================================================ -->
+<script>
+(function() {
+    let reviewCurrentIndex = 0;
+    const reviewTrack = document.querySelector('.review-carousel-track');
+    const reviewDots = document.querySelectorAll('.review-dot');
+    const reviewCards = document.querySelectorAll('.review-card');
+    let reviewCardsPerView = window.innerWidth >= 768 ? 3 : 1;
+    const totalReviews = reviewCards.length;
+    const maxIndex = Math.ceil(totalReviews / reviewCardsPerView) - 1;
+    let reviewAutoInterval;
+
+    function updateCardsPerView() {
+        reviewCardsPerView = window.innerWidth >= 768 ? 3 : 1;
+    }
+
+    function reviewShow(index) {
+        updateCardsPerView();
+        const maxIdx = Math.ceil(totalReviews / reviewCardsPerView) - 1;
+        
+        if (index > maxIdx) reviewCurrentIndex = 0;
+        else if (index < 0) reviewCurrentIndex = maxIdx;
+        else reviewCurrentIndex = index;
+
+        const offset = -(reviewCurrentIndex * (100 / reviewCardsPerView));
+        reviewTrack.style.transform = `translateX(${offset}%)`;
+
+        // Update dots
+        reviewDots.forEach((dot, i) => {
+            dot.classList.toggle('bg-primary', i === reviewCurrentIndex);
+            dot.classList.toggle('bg-gray-300', i !== reviewCurrentIndex);
+            dot.classList.toggle('w-8', i === reviewCurrentIndex);
+            dot.classList.toggle('w-2.5', i !== reviewCurrentIndex);
+        });
+    }
+
+    window.reviewNext = function() {
+        reviewShow(reviewCurrentIndex + 1);
+        reviewResetAuto();
+    };
+
+    window.reviewPrev = function() {
+        reviewShow(reviewCurrentIndex - 1);
+        reviewResetAuto();
+    };
+
+    window.reviewGoTo = function(index) {
+        reviewShow(index);
+        reviewResetAuto();
+    };
+
+    function reviewStartAuto() {
+        reviewAutoInterval = setInterval(() => {
+            reviewShow(reviewCurrentIndex + 1);
+        }, 5000);
+    }
+
+    function reviewResetAuto() {
+        clearInterval(reviewAutoInterval);
+        reviewStartAuto();
+    }
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        reviewShow(reviewCurrentIndex);
+    });
+
+    // Initialize
+    reviewShow(0);
+    reviewStartAuto();
+
+    console.log('✓ Review carousel initialized - ' + totalReviews + ' reviews');
+})();
+</script>
+
+
 
 </body>
 

@@ -18,25 +18,7 @@
             }
         }
     </script>
-</head>
-<body class="bg-gray-50">
-<?php include 'assets/include/header.php'; ?>
-
-<!-- Include Modal -->
-<?php include 'assets/include/modal.php'; ?>
-
-<!-- Just Image - Inline CSS Only -->
-<!-- Responsive Single Image Banner -->
-<section class="page-banner" style="width: 100%; position: relative; overflow: hidden; margin: 0; padding: 0; background: #e5e7eb;">
-    <div style="position: relative; width: 100%; height: 100%;">
-        <img src="./assets/images/crousel1.jpg" 
-             alt="About Indian Traders Corp" 
-             class="banner-image"
-             style="width: 100%; height: 100%; display: block;">
-    </div>
-</section>
-
-<!-- Responsive Banner CSS -->
+    <!-- Responsive Banner CSS -->
 <style>
     /* Base mobile styles */
     .page-banner {
@@ -77,6 +59,25 @@
         }
     }
 </style>
+
+</head>
+<body class="bg-gray-50">
+<?php include 'assets/include/header.php'; ?>
+
+<!-- Include Modal -->
+<?php include 'assets/include/modal.php'; ?>
+
+<!-- Just Image - Inline CSS Only -->
+<!-- Responsive Single Image Banner -->
+<section class="page-banner" style="width: 100%; position: relative; overflow: hidden; margin: 0; padding: 0; background: #e5e7eb;">
+    <div style="position: relative; width: 100%; height: 100%;">
+        <img src="./assets/images/crousel1.jpg" 
+             alt="About Indian Traders Corp" 
+             class="banner-image"
+             style="width: 100%; height: 100%; display: block;">
+    </div>
+</section>
+
 
     <!-- Company Overview -->
     <section class="py-20 bg-white">

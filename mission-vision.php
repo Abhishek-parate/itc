@@ -19,6 +19,37 @@
         }
     </script>
     <style>
+          .page-banner {
+        height: 220px;
+    }
+
+  .banner-img {
+    width: 100%;
+    height: auto;          
+    object-fit: fill;     
+    display: block;
+}
+
+    @media (min-width: 640px) {
+        .page-banner {
+            height: 320px;
+        }
+        .banner-image {
+            object-fit: cover;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .page-banner {
+            height: 450px;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .page-banner {
+            height: 550px;
+        }
+    }
         /* Lazy loading animation */
         .lazy-load {
             opacity: 0;
@@ -77,39 +108,6 @@
              style="width: 100%; height: 100%; display: none; position: absolute; top: 0; left: 0;">
     </div>
 </section>
-
-<!-- Responsive Banner CSS -->
-<style>
-    .page-banner {
-        height: 220px;
-    }
-
-    .banner-image {
-        object-fit: contain;
-        object-position: center;
-    }
-
-    @media (min-width: 640px) {
-        .page-banner {
-            height: 320px;
-        }
-        .banner-image {
-            object-fit: cover;
-        }
-    }
-
-    @media (min-width: 1024px) {
-        .page-banner {
-            height: 450px;
-        }
-    }
-
-    @media (min-width: 1440px) {
-        .page-banner {
-            height: 550px;
-        }
-    }
-</style>
 
 <!-- Intro Section -->
 <section class="py-20 bg-white lazy-load">
