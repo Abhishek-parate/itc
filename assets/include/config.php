@@ -10,6 +10,12 @@ define('DB_PASS', '');
 define('DB_NAME', 'itc_db');
 define('DB_CHARSET', 'utf8mb4');
 
+// define('DB_HOST', 'localhost');
+// define('DB_USER', 'exboumml_abhishek');
+// define('DB_PASS', 'Abhi@9860##@');
+// define('DB_NAME', 'exboumml_itc_db');
+// define('DB_CHARSET', 'utf8mb4');
+
 // ---- PDO Connection (used in API / backend files) ----------
 function getDB(): PDO {
     static $pdo = null;
