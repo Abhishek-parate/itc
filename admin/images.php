@@ -117,7 +117,7 @@ include 'header.php';
 
 <!-- INFO BOX -->
 <div style="background:#eff6ff;border:1.5px solid #bfdbfe;border-radius:12px;padding:14px 18px;margin-bottom:20px;font-size:13px;color:#1e40af;">
-    <b>ℹ️ Info:</b> Har product ka <b>main image</b> products table se aata hai. Extra images yahan add karo — product detail page pe <b>gallery/thumbnails</b> mein dikhenge.
+   <b>ℹ️ Info:</b> The <b>main image</b> of each product comes from the products table. Add extra images here — they will appear in the <b>gallery/thumbnails</b> on the product detail page.
 </div>
 
 <div style="display:grid;grid-template-columns:340px 1fr;gap:20px;align-items:start;">
@@ -169,7 +169,7 @@ include 'header.php';
         <!-- UPLOAD FORM -->
         <div style="background:white;border-radius:16px;border:1.5px solid #e2e8f0;overflow:hidden;margin-bottom:16px;">
             <div style="background:#f8fafc;padding:14px 18px;border-bottom:2px solid #e2e8f0;display:flex;align-items:center;gap:8px;">
-                <span style="font-size:13px;font-weight:800;color:#0a2463;">➕ New Image Add Karo</span>
+                <span style="font-size:13px;font-weight:800;color:#0a2463;">➕ Add New Image</span>
             </div>
             <div style="padding:20px;">
                 <form method="POST" enctype="multipart/form-data" action="?product_id=<?= $selectedId ?>">

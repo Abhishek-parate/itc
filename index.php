@@ -27,7 +27,7 @@
                     'custom': '0 10px 40px rgba(0, 0, 0, 0.15)',
                 },
                 animation: {
-                    'scroll': 'scroll 30s linear infinite',
+                    'scroll': 'scroll  80s linear infinite',
                     'fade-in': 'fadeIn 0.6s ease-out',
                     'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
                     'skeleton': 'skeleton 1.5s ease-in-out infinite',
@@ -48,23 +48,20 @@
     </script>
     <link rel="stylesheet" href="./assets/css/style.css">
     <style>
-    @keyframes scroll {
-        0% {
-            transform: translateX(0);
-        }
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
 
-        100% {
-            transform: translateX(-100%);
-        }
-    }
+.animate-scroll {
 
-    .animate-scroll {
-        animation: scroll 40s linear infinite;
-    }
+   animation: scroll 40s linear infinite;
+    will-change: transform;
+}
 
-    .brands-track:hover .animate-scroll {
-        animation-play-state: paused;
-    }
+.brands-track:hover .animate-scroll {
+    animation-play-state: paused;
+}
 
     /* Base banner styles */
     .banner-section {
@@ -831,147 +828,366 @@
     <!-- ============================================================ -->
     <!-- BRANDS SECTION - TEXT-BASED BADGES                           -->
     <!-- ============================================================ -->
-    <section class="py-12 sm:py-16 bg-gradient-to-br from-primary to-primary-dark">
-        <div class="container mx-auto px-4">
+   <section class="py-12 sm:py-16 bg-gradient-to-br from-primary to-primary-dark">
+    <div class="container mx-auto px-4">
 
-            <!-- Section Header -->
-            <div class="text-center mb-10 sm:mb-12">
-                <div class="inline-block bg-white/20 text-white px-4 py-1 rounded-full text-sm font-bold mb-4">
-                    TRUSTED BRANDS
-                </div>
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3">
-                    Our Brand Partners
-                </h2>
+        <!-- Section Header -->
+        <div class="text-center mb-10 sm:mb-12">
+            <div class="inline-block bg-white/20 text-white px-4 py-1 rounded-full text-sm font-bold mb-4">
+                TRUSTED BRANDS
             </div>
-
-            <!-- Brands Slider -->
-            <div class="relative overflow-hidden">
-                <div class="brands-track flex items-center">
-
-                    <div class="flex items-center gap-6 sm:gap-8 animate-scroll">
-
-                        <!-- Brand Badge 1 -->
-                        <div
-                            class="flex-shrink-0 bg-white rounded-xl px-8 py-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                            <div class="text-2xl sm:text-3xl font-bold text-primary">KIRLOSKAR</div>
-                        </div>
-
-                        <!-- Brand Badge 2 -->
-                        <div
-                            class="flex-shrink-0 bg-white rounded-xl px-8 py-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                            <div class="text-2xl sm:text-3xl font-bold text-primary">L&T</div>
-                        </div>
-
-                        <!-- Brand Badge 3 -->
-                        <div
-                            class="flex-shrink-0 bg-white rounded-xl px-8 py-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                            <div class="text-2xl sm:text-3xl font-bold text-primary">TATA</div>
-                        </div>
-
-                        <!-- Brand Badge 4 -->
-                        <div
-                            class="flex-shrink-0 bg-white rounded-xl px-8 py-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                            <div class="text-2xl sm:text-3xl font-bold text-primary">THERMAX</div>
-                        </div>
-
-                        <!-- Brand Badge 5 -->
-                        <div
-                            class="flex-shrink-0 bg-white rounded-xl px-8 py-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                            <div class="text-2xl sm:text-3xl font-bold text-primary">FLOWSERVE</div>
-                        </div>
-
-                        <!-- Brand Badge 6 -->
-                        <div
-                            class="flex-shrink-0 bg-white rounded-xl px-8 py-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                            <div class="text-2xl sm:text-3xl font-bold text-primary">HONEYWELL</div>
-                        </div>
-
-                        <!-- Brand Badge 7 -->
-                        <div
-                            class="flex-shrink-0 bg-white rounded-xl px-8 py-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                            <div class="text-2xl sm:text-3xl font-bold text-primary">KSB</div>
-                        </div>
-
-                        <!-- Brand Badge 8 -->
-                        <div
-                            class="flex-shrink-0 bg-white rounded-xl px-8 py-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                            <div class="text-2xl sm:text-3xl font-bold text-primary">EMERSON</div>
-                        </div>
-
-                        <!-- Brand Badge 9 -->
-                        <div
-                            class="flex-shrink-0 bg-white rounded-xl px-8 py-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                            <div class="text-2xl sm:text-3xl font-bold text-primary">SPIRAX</div>
-                        </div>
-
-                        <!-- Brand Badge 10 -->
-                        <div
-                            class="flex-shrink-0 bg-white rounded-xl px-8 py-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                            <div class="text-2xl sm:text-3xl font-bold text-primary">FORBES</div>
-                        </div>
-
-                    </div>
-
-                    <!-- Duplicate for seamless loop -->
-                    <div class="flex items-center gap-6 sm:gap-8 animate-scroll" aria-hidden="true">
-
-                        <div
-                            class="flex-shrink-0 bg-white rounded-xl px-8 py-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                            <div class="text-2xl sm:text-3xl font-bold text-primary">KIRLOSKAR</div>
-                        </div>
-
-                        <div
-                            class="flex-shrink-0 bg-white rounded-xl px-8 py-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                            <div class="text-2xl sm:text-3xl font-bold text-primary">L&T</div>
-                        </div>
-
-                        <div
-                            class="flex-shrink-0 bg-white rounded-xl px-8 py-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                            <div class="text-2xl sm:text-3xl font-bold text-primary">TATA</div>
-                        </div>
-
-                        <div
-                            class="flex-shrink-0 bg-white rounded-xl px-8 py-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                            <div class="text-2xl sm:text-3xl font-bold text-primary">THERMAX</div>
-                        </div>
-
-                        <div
-                            class="flex-shrink-0 bg-white rounded-xl px-8 py-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                            <div class="text-2xl sm:text-3xl font-bold text-primary">FLOWSERVE</div>
-                        </div>
-
-                        <div
-                            class="flex-shrink-0 bg-white rounded-xl px-8 py-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                            <div class="text-2xl sm:text-3xl font-bold text-primary">HONEYWELL</div>
-                        </div>
-
-                        <div
-                            class="flex-shrink-0 bg-white rounded-xl px-8 py-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                            <div class="text-2xl sm:text-3xl font-bold text-primary">KSB</div>
-                        </div>
-
-                        <div
-                            class="flex-shrink-0 bg-white rounded-xl px-8 py-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                            <div class="text-2xl sm:text-3xl font-bold text-primary">EMERSON</div>
-                        </div>
-
-                        <div
-                            class="flex-shrink-0 bg-white rounded-xl px-8 py-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                            <div class="text-2xl sm:text-3xl font-bold text-primary">SPIRAX</div>
-                        </div>
-
-                        <div
-                            class="flex-shrink-0 bg-white rounded-xl px-8 py-5 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                            <div class="text-2xl sm:text-3xl font-bold text-primary">FORBES</div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3">
+                Our Brand Partners
+            </h2>
         </div>
-    </section>
+
+        <!-- Brands Slider -->
+        <div class="relative overflow-hidden">
+            <div class="brands-track flex items-center">
+
+                <!-- ===== FIRST SET ===== -->
+                <div class="flex items-center gap-10 sm:gap-14 animate-scroll">
+
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Aeroflex pneumatics logo.png" alt="Aeroflex" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Aira euro automation logo.png" alt="Aira Euro Automation" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Airmax pneumatics.png" alt="Airmax Pneumatics" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Akari Pneumatics.png" alt="Akari Pneumatics" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Akvalo-Photoroom.png" alt="Akvalo" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Alto Valves.png" alt="Alto Valves" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Arbuda Instruments logo-Photoroom.png" alt="Arbuda Instruments" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Armor Fire logo 2.png" alt="Armor Fire" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Armor Fire Logo.png" alt="Armor Fire Logo" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/B&M Forge fittings.png" alt="B&M Forge Fittings" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Baumer_Logo.svg.png" alt="Baumer" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Cair.png" alt="Cair" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/cropped-kimax-logo-1-1-162x54.png" alt="Kimax" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Danfoss Logo.png" alt="Danfoss" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Dowty Hydraulics-Photoroom.png" alt="Dowty Hydraulics" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Easyflex.png" alt="Easyflex" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Eaton Logo.png" alt="Eaton" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Elems -Photoroom.png" alt="Elems" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/festo.png" alt="Festo" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Force logo-Photoroom.png" alt="Force" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Gokul Poly Valves.png" alt="Gokul Poly Valves" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/hawa engineering.png" alt="Hawa Engineering" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/hydint-Photoroom.png" alt="Hydint" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Hydroline products logo.png" alt="Hydroline" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Jacktech Hydraulics.png" alt="Jacktech Hydraulics" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/janatics.png" alt="Janatics" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Kartar.png" alt="Kartar" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Koojan Hydraulcis logo 2.png" alt="Koojan Hydraulics" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/kranti.png" alt="Kranti" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Logo_Force.png" alt="Force" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Mahavir Valves Logo.png" alt="Mahavir Valves" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/marck logos.png" alt="Marck" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Mercury logo 2.png" alt="Mercury" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Mercury Logo.png" alt="Mercury Logo" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/MSL Logo.png" alt="MSL" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Newage Fire fighting co. ltd logo.png" alt="Newage Fire Fighting" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Normex Valves Logo.png" alt="Normex Valves" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/PMW .png" alt="PMW" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Polyhose logo.png" alt="Polyhose" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Polyhydron Logo.png" alt="Polyhydron" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Qinn Logo.png" alt="Qinn" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Rajdeep.png" alt="Rajdeep" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Shital metal products.png" alt="Shital Metal Products" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Supremo Gear Pumps.png" alt="Supremo Gear Pumps" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Surya Prakash steel tubes logo.png" alt="Surya Prakash" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Suzhik Valves (2).png" alt="Suzhik Valves" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Techno Pneumatics logo.png" alt="Techno Pneumatics" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Torque-Photoroom.png" alt="Torque" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/UPC Logo.png" alt="UPC" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/UPC Valves Logo.png" alt="UPC Valves" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/VBC hydraulics.png" alt="VBC Hydraulics" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/veljan.png" alt="Veljan" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Vickers logo.png" alt="Vickers" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Yuken Logo.png" alt="Yuken" class="h-16 w-36 object-contain">
+                    </div>
+
+                </div>
+                <!-- END FIRST SET -->
+
+                <!-- ===== DUPLICATE SET FOR SEAMLESS LOOP ===== -->
+                <div class="flex items-center gap-10 sm:gap-14 animate-scroll" aria-hidden="true">
+
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Aeroflex pneumatics logo.png" alt="Aeroflex" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Aira euro automation logo.png" alt="Aira Euro Automation" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Airmax pneumatics.png" alt="Airmax Pneumatics" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Akari Pneumatics.png" alt="Akari Pneumatics" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Akvalo-Photoroom.png" alt="Akvalo" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Alto Valves.png" alt="Alto Valves" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Arbuda Instruments logo-Photoroom.png" alt="Arbuda Instruments" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Armor Fire logo 2.png" alt="Armor Fire" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Armor Fire Logo.png" alt="Armor Fire Logo" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/B&M Forge fittings.png" alt="B&M Forge Fittings" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Baumer_Logo.svg.png" alt="Baumer" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Cair.png" alt="Cair" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/cropped-kimax-logo-1-1-162x54.png" alt="Kimax" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Danfoss Logo.png" alt="Danfoss" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Dowty Hydraulics-Photoroom.png" alt="Dowty Hydraulics" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Easyflex.png" alt="Easyflex" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Eaton Logo.png" alt="Eaton" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Elems-Photoroom.png" alt="Elems" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/festo.png" alt="Festo" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Force logo-Photoroom.png" alt="Force" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Gokul Poly Valves.png" alt="Gokul Poly Valves" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/hawa engineering.png" alt="Hawa Engineering" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/hydint-Photoroom.png" alt="Hydint" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Hydroline products logo.png" alt="Hydroline" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Jacktech Hydraulics.png" alt="Jacktech Hydraulics" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/janatics.png" alt="Janatics" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Kartar.png" alt="Kartar" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Koojan Hydraulcis logo 2.png" alt="Koojan Hydraulics" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/kranti.png" alt="Kranti" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Logo_Force.png" alt="Force" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Mahavir Valves Logo.png" alt="Mahavir Valves" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/marck logos.png" alt="Marck" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Mercury logo 2.png" alt="Mercury" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Mercury Logo.png" alt="Mercury Logo" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/MSL Logo.png" alt="MSL" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Newage Fire fighting co. ltd logo.png" alt="Newage Fire Fighting" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Normex Valves Logo.png" alt="Normex Valves" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/PMW.png" alt="PMW" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Polyhose logo.png" alt="Polyhose" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Polyhydron Logo.png" alt="Polyhydron" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Qinn Logo.png" alt="Qinn" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Rajdeep.png" alt="Rajdeep" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Shital metal products.png" alt="Shital Metal Products" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Supremo Gear Pumps.png" alt="Supremo Gear Pumps" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Surya Prakash steel tubes logo.png" alt="Surya Prakash" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Suzhik Valves (2).png" alt="Suzhik Valves" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Techno Pneumatics logo.png" alt="Techno Pneumatics" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Torque-Photoroom.png" alt="Torque" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/UPC Logo.png" alt="UPC" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/UPC Valves Logo.png" alt="UPC Valves" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/VBC hydraulics.png" alt="VBC Hydraulics" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/veljan.png" alt="Veljan" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Vickers logo.png" alt="Vickers" class="h-16 w-36 object-contain">
+                    </div>
+                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                        <img src="assets/images/ITClogos/Yuken Logo.png" alt="Yuken" class="h-16 w-36 object-contain">
+                    </div>
+
+                </div>
+                <!-- END DUPLICATE SET -->
+
+            </div>
+        </div>
+
+    </div>
+</section>
 
     <!-- ============================================================ -->
     <!-- DIRECTOR'S MESSAGE SECTION                                   -->
@@ -2229,7 +2445,50 @@
         console.log('✓ Review carousel initialized - ' + totalReviews + ' reviews');
     })();
     </script>
+<script>
+(function() {
+    const track = document.querySelector('.brands-track');
+    if (!track) return;
 
+   
+    const firstSet = track.querySelectorAll('.animate-scroll')[0];
+    if (!firstSet) return;
+
+  
+    track.querySelectorAll('.animate-scroll').forEach(div => {
+        div.style.animation = 'none';
+        div.style.webkitAnimation = 'none';
+    });
+
+    let position = 0;
+    const speed = 1.2;
+    let isPaused = false;
+    let animating = true;
+
+    track.addEventListener('mouseenter', () => isPaused = true);
+    track.addEventListener('mouseleave', () => isPaused = false);
+
+    function getWidth() {
+        return firstSet.scrollWidth;
+    }
+
+    function loop() {
+        if (!isPaused) {
+            position -= speed;
+            const w = getWidth();
+            if (Math.abs(position) >= w) position = 0;
+            track.querySelector('.animate-scroll').style.transform = `translateX(${position}px)`;
+        }
+        if (animating) requestAnimationFrame(loop);
+    }
+
+    setTimeout(() => {
+        loop();
+        console.log('✓ Brand scroll started, width:', firstSet.scrollWidth);
+    }, 1000);
+
+})();
+</script>
 
 
 </body>
