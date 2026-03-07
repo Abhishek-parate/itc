@@ -197,7 +197,9 @@ mark.sh { background: #fef08a; color: #1e293b; padding: 0 2px; border-radius: 2p
         <div class="flex items-center justify-between">
 
             <div class="flex items-center space-x-3 flex-shrink-0">
-                <img src="./assets/images/ITC LOGO.png" alt="Indian Traders Corp Logo" class="h-12 w-12">
+               <a href="index.php">
+    <img src="./assets/images/ITC LOGO.png" alt="Indian Traders Corp Logo" class="h-12 w-12">
+</a>
                 <div>
                     <h1 class="text-xl font-bold text-primary">Indian Traders Corp</h1>
                     <p class="text-xs text-gray-600">Since 1969</p>

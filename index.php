@@ -53,17 +53,27 @@
     100% { transform: translateX(-100%); }
 }
 
-.animate-scroll {
-
-   animation: scroll 40s linear infinite;
-    will-change: transform;
+/* Brand card size chota */
+.animate-scroll > div {
+    min-width: 110px !important;
+    padding: 12px 16px !important;
+    border-radius: 12px !important;
 }
 
+.animate-scroll > div img {
+    height: 36px !important;
+    width: 90px !important;
+}
+
+
+.animate-scroll {
+    gap: 20px !important;
+}
 .brands-track:hover .animate-scroll {
     animation-play-state: paused;
 }
 
-    /* Base banner styles */
+
     .banner-section {
         height: auto;
         /* Default mobile */
@@ -92,7 +102,6 @@
         display: block;
     }
 
-    /* Arrow buttons - mobile size */
     .banner-arrow {
         width: 35px;
         height: 35px;
@@ -828,7 +837,7 @@
     <!-- ============================================================ -->
     <!-- BRANDS SECTION - TEXT-BASED BADGES                           -->
     <!-- ============================================================ -->
-   <section class="py-12 sm:py-16 bg-gradient-to-br from-primary to-primary-dark">
+   <section class="py-8 bg-gradient-to-br from-primary to-primary-dark">
     <div class="container mx-auto px-4">
 
         <!-- Section Header -->
@@ -2450,46 +2459,41 @@
     const track = document.querySelector('.brands-track');
     if (!track) return;
 
-   
-    const firstSet = track.querySelectorAll('.animate-scroll')[0];
-    if (!firstSet) return;
-
-  
-    track.querySelectorAll('.animate-scroll').forEach(div => {
+    const sets = track.querySelectorAll('.animate-scroll');
+    sets.forEach(div => {
         div.style.animation = 'none';
         div.style.webkitAnimation = 'none';
     });
 
+  
+    track.style.display = 'flex';
+    track.style.width = 'max-content';
+
     let position = 0;
     const speed = 1.2;
     let isPaused = false;
-    let animating = true;
 
     track.addEventListener('mouseenter', () => isPaused = true);
     track.addEventListener('mouseleave', () => isPaused = false);
 
-    function getWidth() {
-        return firstSet.scrollWidth;
-    }
-
     function loop() {
         if (!isPaused) {
             position -= speed;
-            const w = getWidth();
-            if (Math.abs(position) >= w) position = 0;
-            track.querySelector('.animate-scroll').style.transform = `translateX(${position}px)`;
+ 
+            const firstSetWidth = sets[0].scrollWidth;
+           
+            if (Math.abs(position) >= firstSetWidth) {
+                position = 0;
+            }
+            track.style.transform = `translateX(${position}px)`;
         }
-        if (animating) requestAnimationFrame(loop);
+        requestAnimationFrame(loop);
     }
 
-    setTimeout(() => {
-        loop();
-        console.log('✓ Brand scroll started, width:', firstSet.scrollWidth);
-    }, 1000);
-
+    loop();
+    console.log('✓ Brand scroll continuous loop started');
 })();
 </script>
-
 
 </body>
 
