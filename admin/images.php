@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                     $ins->execute();
                     $uploadMsg = '✅ Image successfully uploaded!';
                 } else {
-                    $uploadErr = 'Upload fail ho gaya! Folder permissions check karo.';
+                    $uploadErr = 'Upload Failed . Check folder permissions';
                 }
             }
         }
@@ -247,7 +247,7 @@ include 'header.php';
             <?php else: ?>
             <!-- MAIN IMAGE (read-only) -->
             <div style="padding:14px 18px;border-bottom:1px solid #f1f5f9;background:#f0fdf4;">
-                <div style="font-size:11px;font-weight:700;color:#166534;margin-bottom:10px;text-transform:uppercase;letter-spacing:0.05em;">✅ Main Image (products table se)</div>
+                <div style="font-size:11px;font-weight:700;color:#166534;margin-bottom:10px;text-transform:uppercase;letter-spacing:0.05em;">✅ Main Image (From Products Table)</div>
                 <div style="display:flex;align-items:center;gap:12px;">
                     <img src="../<?= htmlspecialchars(ltrim($selectedProduct['image'],'./')) ?>"
                          style="width:64px;height:64px;object-fit:contain;border-radius:8px;border:1.5px solid #bbf7d0;padding:4px;background:white;">
