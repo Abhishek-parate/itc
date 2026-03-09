@@ -32,26 +32,34 @@
                 <h4 class="text-lg font-bold text-white mb-4 border-b border-gray-700 pb-2">Quick Links</h4>
                 <ul class="space-y-2">
                     <li>
-                        <a href="index.php" class="text-sm hover:text-red-500 transition-colors duration-200 flex items-center group">
-                            <span class="mr-2 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <a href="index.php"
+                            class="text-sm hover:text-red-500 transition-colors duration-200 flex items-center group">
+                            <span
+                                class="mr-2 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="about.php" class="text-sm hover:text-red-500 transition-colors duration-200 flex items-center group">
-                            <span class="mr-2 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <a href="about.php"
+                            class="text-sm hover:text-red-500 transition-colors duration-200 flex items-center group">
+                            <span
+                                class="mr-2 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                             About Us
                         </a>
                     </li>
                     <li>
-                        <a href="products.php" class="text-sm hover:text-red-500 transition-colors duration-200 flex items-center group">
-                            <span class="mr-2 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <a href="products.php"
+                            class="text-sm hover:text-red-500 transition-colors duration-200 flex items-center group">
+                            <span
+                                class="mr-2 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                             Products
                         </a>
                     </li>
                     <li>
-                        <a href="contact.php" class="text-sm hover:text-red-500 transition-colors duration-200 flex items-center group">
-                            <span class="mr-2 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <a href="contact.php"
+                            class="text-sm hover:text-red-500 transition-colors duration-200 flex items-center group">
+                            <span
+                                class="mr-2 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                             Contact
                         </a>
                     </li>
@@ -63,26 +71,34 @@
                 <h4 class="text-lg font-bold text-white mb-4 border-b border-gray-700 pb-2">Our Products</h4>
                 <ul class="space-y-2">
                     <li>
-                        <a href="products.php#valves" class="text-sm hover:text-red-500 transition-colors duration-200 flex items-center group">
-                            <span class="mr-2 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <a href="products.php#valves"
+                            class="text-sm hover:text-red-500 transition-colors duration-200 flex items-center group">
+                            <span
+                                class="mr-2 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                             Industrial Valves
                         </a>
                     </li>
                     <li>
-                        <a href="products.php#pipes" class="text-sm hover:text-red-500 transition-colors duration-200 flex items-center group">
-                            <span class="mr-2 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <a href="products.php#pipes"
+                            class="text-sm hover:text-red-500 transition-colors duration-200 flex items-center group">
+                            <span
+                                class="mr-2 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                             Pipes & Fittings
                         </a>
                     </li>
                     <li>
-                        <a href="products.php#accessories" class="text-sm hover:text-red-500 transition-colors duration-200 flex items-center group">
-                            <span class="mr-2 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <a href="products.php#accessories"
+                            class="text-sm hover:text-red-500 transition-colors duration-200 flex items-center group">
+                            <span
+                                class="mr-2 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                             Accessories
                         </a>
                     </li>
                     <li>
-                        <a href="products.php#pipes" class="text-sm hover:text-red-500 transition-colors duration-200 flex items-center group">
-                            <span class="mr-2 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                        <a href="products.php#pipes"
+                            class="text-sm hover:text-red-500 transition-colors duration-200 flex items-center group">
+                            <span
+                                class="mr-2 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                             Flanges
                         </a>
                     </li>
@@ -94,31 +110,44 @@
                 <h4 class="text-lg font-bold text-white mb-4 border-b border-gray-700 pb-2">Contact Us</h4>
                 <ul class="space-y-3 text-sm">
                     <li class="flex items-start">
-                        <svg class="w-5 h-5 mr-2 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        <svg class="w-5 h-5 mr-2 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                         </svg>
-                        <span class="text-gray-400">Opposite Daga Hospital, Gandhibagh, Nagpur, Maharashtra - 440002</span>
+                        <span class="text-gray-400">Opposite Daga Hospital, Gandhibagh, Nagpur, Maharashtra -
+                            440002</span>
                     </li>
                     <li class="flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-red-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        <svg class="w-5 h-5 mr-2 text-red-500 flex-shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
                         </svg>
                         <a href="mailto:sales@itc.com" class="hover:text-red-500 transition-colors">
                             sales@itc.com
                         </a>
                     </li>
                     <li class="flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-red-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        <svg class="w-5 h-5 mr-2 text-red-500 flex-shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                            </path>
                         </svg>
                         <a href="tel:+917122345678" class="hover:text-red-500 transition-colors">
                             +91 712 234 5678
                         </a>
                     </li>
                     <li class="flex items-start pt-2 border-t border-gray-700">
-                        <svg class="w-5 h-5 mr-2 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        <svg class="w-5 h-5 mr-2 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                         <div class="text-gray-400">
                             <p><strong class="text-white">Mon - Sat:</strong> 10:30 AM - 6:00 PM</p>
@@ -136,7 +165,8 @@
         <div class="container mx-auto px-4 py-6">
             <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                 <div class="text-sm text-gray-400">
-                    <p>&copy; <?php echo date('Y'); ?> <strong class="text-white">Indian Traders Corp</strong>. All rights reserved.</p>
+                    <p>&copy; <?php echo date('Y'); ?> <strong class="text-white">Indian Traders Corp</strong>. All
+                        rights reserved.</p>
                 </div>
 
                 <!-- Social Media Links (Optional) -->
@@ -163,33 +193,36 @@
     </div>
 
     <!-- Back to Top Button -->
-    <button id="backToTop" onclick="scrollToTop()" 
-            class="fixed bottom-8 right-8 bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 opacity-0 invisible z-50">
+    <button id="backToTop" onclick="scrollToTop()"
+        class="fixed bottom-8 right-8 bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 opacity-0 invisible z-50">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
         </svg>
     </button>
+    
+    <!-- ITC Chatbot -->
+    <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/itc/assets/include/chatbot.php'; ?>
 
 </footer>
 
 <!-- Footer JavaScript -->
 <script>
-    // Back to Top Button Functionality
-    window.addEventListener('scroll', function() {
-        const backToTopBtn = document.getElementById('backToTop');
-        if (window.pageYOffset > 300) {
-            backToTopBtn.classList.remove('opacity-0', 'invisible');
-            backToTopBtn.classList.add('opacity-100', 'visible');
-        } else {
-            backToTopBtn.classList.remove('opacity-100', 'visible');
-            backToTopBtn.classList.add('opacity-0', 'invisible');
-        }
-    });
-
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+// Back to Top Button Functionality
+window.addEventListener('scroll', function() {
+    const backToTopBtn = document.getElementById('backToTop');
+    if (window.pageYOffset > 300) {
+        backToTopBtn.classList.remove('opacity-0', 'invisible');
+        backToTopBtn.classList.add('opacity-100', 'visible');
+    } else {
+        backToTopBtn.classList.remove('opacity-100', 'visible');
+        backToTopBtn.classList.add('opacity-0', 'invisible');
     }
+});
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
 </script>
