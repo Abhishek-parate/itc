@@ -269,6 +269,8 @@ mark.sh { background: #fef08a; color: #1e293b; padding: 0 2px; border-radius: 2p
                 </div>
 
                 <a href="products.php" class="text-gray-700 hover:text-secondary font-semibold transition">Products</a>
+                <a href="gallery.php" class="text-gray-700 hover:text-secondary font-semibold transition">Gallery</a>
+                <a href="blog.php" class="text-gray-700 hover:text-secondary font-semibold transition">Blog</a>
                 <a href="contact.php"  class="text-gray-700 hover:text-secondary font-semibold transition">Contact</a>
 
                 <button onclick="openQuoteModal()" class="bg-red-700 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-800 transition-all transform hover:scale-105 shadow-lg">
@@ -338,6 +340,8 @@ mark.sh { background: #fef08a; color: #1e293b; padding: 0 2px; border-radius: 2p
             </div>
 
             <a href="products.php" class="block text-gray-700 hover:text-secondary font-semibold transition">Products</a>
+            <a href="gallery.php" class="block text-gray-700 hover:text-secondary font-semibold transition">Gallery</a>
+            <a href="blog.php" class="block text-gray-700 hover:text-secondary font-semibold transition">Blog</a>
             <a href="contact.php"  class="block text-gray-700 hover:text-secondary font-semibold transition">Contact</a>
 
             <button onclick="openQuoteModal()" class="w-full bg-red-700 text-white px-6 py-2 rounded-lg font-bold hover:bg-red-800 transition-all shadow-lg">

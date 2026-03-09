@@ -2066,14 +2066,14 @@ html, body {
     .mob-quote:active { transform: none }
 }
 .mob-product-section {
-    display: none; /* desktop pe hidden */
+    display: none; 
 }
 
 @media(max-width:860px) {
-    /* Hero band ko mobile pe hide kar */
+
     .hero-band { display: none !important; }
 
-    /* Naya mobile section show */
+   
     .mob-product-section {
         display: flex;
         flex-direction: column;
@@ -2267,6 +2267,48 @@ html, body {
 @media(max-width:860px) {
     .mob-about { display: block; }
 }
+#floatingCartBtn {
+    display: none !important;
+}
+#wa-float-btn{
+    position: fixed;
+    bottom: 22px;
+    right: 18px;
+    z-index: 9999;
+    background: #25D366;
+    color: #fff;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+
+    box-shadow: 0 4px 24px rgba(37,211,102,0.45);
+    text-decoration: none;
+    transition: transform .2s, box-shadow .2s;
+}
+#wa-float-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 30px rgba(37,211,102,0.55);
+}
+#wa-float-btn svg {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1023px) {
+    #wa-float-btn {
+        bottom: 90px; 
+        right: 14px;
+    }
+}
+
 
     </style>
 </head>
@@ -2297,37 +2339,77 @@ html, body {
         </div>
     </div>
 <!-- ════ MOBILE ONLY PRODUCT SECTION ════ -->
-<!-- ════ MOBILE ONLY PRODUCT SECTION ════ -->
 <div class="mob-product-section">
 
-    <!-- 1. IMAGE + BADGES -->
-    <div class="mob-img-wrap" style="position:relative; overflow:hidden;">
-        <div style="position:absolute;top:12px;left:12px;z-index:5;">
-            <?php if($product['in_stock']): ?>
-            <span class="b-stock">✓ <?= htmlspecialchars($product['stock_label']) ?></span>
-            <?php else: ?>
-            <span class="b-stock" style="background:#dc2626">Out of Stock</span>
+    <!-- 1. IMAGE + PRICE SIDE BY SIDE ROW -->
+    <div style="display:flex;flex-direction:row;align-items:stretch;gap:0;border-bottom:1px solid var(--border);">
+
+        <!-- LEFT: IMAGE -->
+        <div style="position:relative;flex:0 0 48%;max-width:48%;overflow:hidden;background:#f8fafc;border-right:1px solid var(--border);">
+            <!-- In Stock badge -->
+            <div style="position:absolute;top:8px;left:8px;z-index:5;">
+                <?php if($product['in_stock']): ?>
+                <span class="b-stock">✓ <?= htmlspecialchars($product['stock_label']) ?></span>
+                <?php else: ?>
+                <span class="b-stock" style="background:#dc2626">Out of Stock</span>
+                <?php endif; ?>
+            </div>
+            <!-- Ships within badge -->
+            <div style="position:absolute;bottom:8px;left:50%;transform:translateX(-50%);z-index:5;white-space:nowrap;">
+                <span style="background:rgba(22,163,74,.1);border:1px solid rgba(22,163,74,.25);color:var(--green);font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px;">
+                    <?= htmlspecialchars($product['ships_within']) ?>
+                </span>
+            </div>
+            <img src="<?= htmlspecialchars($images[0]['image_path']) ?>"
+                 alt="<?= htmlspecialchars($product['name']) ?>"
+                 id="mob-main-img"
+                 style="display:block;width:100%;height:200px;object-fit:contain;padding:12px;">
+        </div>
+
+        <!-- RIGHT: PRICE BLOCK -->
+        <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-start;padding:8px 8px;gap:3px;position:relative;">
+
+            <!-- Best Price badge top right -->
+            <?php if($product['best_price']): ?>
+            <div style="position:absolute;top:6px;right:6px;">
+                <span class="b-best">Best Price ✓</span>
+            </div>
             <?php endif; ?>
+
+            <!-- MRP -->
+            <p class="mob-mrp" style="margin:0;padding-top:0;">MRP <?= formatINR($mrpDisplay) ?></p>
+            <p style="font-size:12px;color:var(--muted);margin:0;">(Incl. of all taxes)</p>
+
+            <!-- Price -->
+            <div style="margin:0;">
+                <span class="mob-price" style="font-size:30px;margin-top:20px;"><?= formatINR($product['price_min']) ?></span>
+            </div>
+
+            <!-- Save + GST inline on same row -->
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin:0;">
+                <?php if($savings > 0): ?>
+                <span class="mob-save">Save <?= formatINR($savings) ?></span>
+                <?php endif; ?>
+                <p class="mob-gst" style="margin:0;">+ <?= $product['gst_percent'] ?>% GST</p>
+            </div>
+
+            <!-- Qty Selector -->
+            <div style="display:flex;flex-direction:column;gap:2px;margin-top:4px;">
+                <span style="font-size:9px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;">Select Qty</span>
+                <div class="qty-box" style="border:2px solid var(--navy);border-radius:var(--r8);overflow:hidden;background:#fff;display:inline-flex;">
+                    <button onclick="decreaseQuantity()" style="width:30px;height:34px;background:#f8fafc;border:none;color:var(--navy);font-size:16px;font-weight:700;cursor:pointer;">−</button>
+                    <input type="number" id="quantity" value="1" min="1" readonly style="width:34px;height:34px;text-align:center;font-size:13px;font-weight:800;color:var(--navy);border:none;border-left:2px solid var(--navy);border-right:2px solid var(--navy);outline:none;background:#fff;font-family:'Sora',sans-serif;">
+                    <button onclick="increaseQuantity()" style="width:30px;height:34px;background:#f8fafc;border:none;color:var(--navy);font-size:16px;font-weight:700;cursor:pointer;">+</button>
+                </div>
+                <span style="font-size:9px;color:var(--faint);">Min: <?= $product['min_order'] ?></span>
+            </div>
+
         </div>
-        <?php if($product['best_price']): ?>
-        <div style="position:absolute;top:12px;right:12px;z-index:5;">
-            <span class="b-best">Best Price ✓</span>
-        </div>
-        <?php endif; ?>
-        <div style="position:absolute;top:12px;left:50%;transform:translateX(-50%);z-index:5;">
-            <span style="background:rgba(22,163,74,.1);border:1px solid rgba(22,163,74,.25);color:var(--green);font-size:10px;font-weight:700;padding:4px 12px;border-radius:20px;white-space:nowrap;">
-                <?= htmlspecialchars($product['ships_within']) ?>
-            </span>
-        </div>
-        <img src="<?= htmlspecialchars($images[0]['image_path']) ?>"
-             alt="<?= htmlspecialchars($product['name']) ?>"
-             id="mob-main-img"
-             style="display:block;max-height:240px;max-width:100%;object-fit:contain;padding:16px;margin:0 auto;">
     </div>
 
     <!-- THUMB STRIP -->
     <?php if(count($images) > 1): ?>
-    <div style="display:flex;gap:8px;padding:12px 16px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--border);">
+    <div style="display:flex;gap:8px;padding:10px 16px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--border);">
         <?php foreach($images as $idx => $img): ?>
         <div onclick="document.getElementById('mob-main-img').src='<?= htmlspecialchars($img['image_path']) ?>';document.querySelectorAll('.mob-thumb').forEach(t=>t.classList.remove('on'));this.classList.add('on')"
              class="thumb-item mob-thumb <?= $idx===0?'on':'' ?>"
@@ -2346,29 +2428,7 @@ html, body {
     <p class="mob-desc"><?= htmlspecialchars($product['subtitle']) ?></p>
     <?php endif; ?>
 
-  <!-- 4. PRICE BLOCK -->
-<div class="mob-price-block">
-    <p class="mob-mrp">MRP <?= formatINR($mrpDisplay) ?> (Incl. of all taxes)</p>
-    <div class="mob-price-row" style="display:flex;align-items:center;justify-content:space-between;">
-        <div>
-            <span class="mob-price"><?= formatINR($product['price_min']) ?></span>
-            <?php if($savings > 0): ?>
-            <span class="mob-save">Save <?= formatINR($savings) ?></span>
-            <?php endif; ?>
-        </div>
-        <div style="display:flex;flex-direction:column;align-items:center;gap:3px;">
-            <span style="font-size:9px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;">Select Qty</span>
-            <div class="qty-box" style="border:2px solid var(--navy);border-radius:var(--r8);overflow:hidden;background:#fff;">
-                <button onclick="decreaseQuantity()" style="width:32px;height:36px;background:#f8fafc;border:none;color:var(--navy);font-size:16px;font-weight:700;cursor:pointer;">−</button>
-                <input type="number" id="quantity" value="1" min="1" readonly style="width:38px;height:36px;text-align:center;font-size:13px;font-weight:800;color:var(--navy);border:none;border-left:2px solid var(--navy);border-right:2px solid var(--navy);outline:none;background:#fff;font-family:'Sora',sans-serif;">
-                <button onclick="increaseQuantity()" style="width:32px;height:36px;background:#f8fafc;border:none;color:var(--navy);font-size:16px;font-weight:700;cursor:pointer;">+</button>
-            </div>
-            <span style="font-size:9px;color:var(--faint);">Min: <?= $product['min_order'] ?></span>
-        </div>
-    </div>
-    <p class="mob-gst">+ <?= $product['gst_percent'] ?>% GST applicable</p>
-</div>
-    <!-- 5. RATING + STOCK -->
+    <!-- 4. RATING + STOCK -->
     <div class="mob-rating">
         <div class="stars">
             <?php $r=floatval($product['rating']); for($st=1;$st<=5;$st++): ?>
@@ -2385,7 +2445,7 @@ html, body {
         <?php endif; ?>
     </div>
 
-    <!-- 6. PCARD LINKS ROW -->
+    <!-- 5. PCARD LINKS ROW -->
     <div class="pcard-links" style="display:flex;flex-direction:row;gap:8px;">
         <a href="tel:+918468851160" class="pcard-link" style="flex:1;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:4px;padding:10px 6px;">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:18px;height:18px;flex-shrink:0;">
@@ -2409,7 +2469,7 @@ html, body {
         </button>
     </div>
 
-    <!-- 7. LONG DESCRIPTION — MOB-ABOUT (desktop pe hidden) -->
+    <!-- 6. LONG DESCRIPTION -->
     <?php if(!empty($product['description'])): ?>
     <div class="mob-about">
         <div class="mob-about-title">
@@ -2982,6 +3042,15 @@ html, body {
             <div id="miniModalBody" style="padding:16px"></div>
         </div>
     </div>
+<a href="https://wa.me/918468851160?text=Hi%2C%20I%20am%20interested%20in%20your%20products.%20Please%20share%20details."
+   id="wa-float-btn"
+   target="_blank"
+   rel="noopener noreferrer"  onclick="proceedToWhatsApp()">
+    <svg fill="currentColor" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    
+</a>
 
     <!-- ═══════════════════════ JAVASCRIPT (Logic 100% unchanged) ═══════════════════════ -->
     <script>

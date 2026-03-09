@@ -61,10 +61,9 @@
 }
 
 .animate-scroll > div img {
-    height: 36px !important;
-    width: 90px !important;
+    height: 65px !important;
+    width: 130px !important;
 }
-
 
 .animate-scroll {
     gap: 20px !important;
@@ -277,7 +276,35 @@
             flex-shrink: 0;
         }
     }
-    </style>
+.brands-track img {
+    width: 150px !important;
+    height: 80px !important;
+    max-width: 150px !important;
+    max-height: 80px !important;
+    object-fit: contain !important;
+}
+
+.brands-track img[alt="Hawa Engineering"],
+.brands-track img[alt="Hawa Engineering"][class] {
+    width: 170px !important;
+    height: 80px !important;
+    max-width: 150px !important;
+    max-height: 80px !important;
+    object-fit: contain !important;
+    transform: scale(1.2) !important;
+}
+
+.brands-track img[alt="Hydroline"],
+.brands-track img[alt="Hydroline"][class] {
+    width: 150px !important;
+    height: 80px !important;
+    max-width: 150px !important;
+    max-height: 80px !important;
+    object-fit: contain !important;
+    transform: scale(1.9) !important;
+}
+
+</style>
 </head>
 
 <body class="bg-gray-50">
@@ -554,293 +581,268 @@
     <!-- Desktop: 6-6-6 (3 rows) | Mobile: 2-2-2-2-2-2 (6 rows)      -->
     <!-- With Skeleton Loading + Lazy Loading                        -->
     <!-- ============================================================ -->
-    <section class="py-12 sm:py-16 md:py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-10 sm:mb-12 md:mb-16">
-                <div
-                    class="inline-block bg-red-100 text-secondary px-3 py-1 sm:px-4 rounded-full text-xs sm:text-sm font-bold mb-3 sm:mb-4">
-                    OUR SPECIALIZATION
-                </div>
-                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-3 sm:mb-4 px-4">
-                    Complete Product Range</h2>
-                <p class="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
-                    From valves to fittings, we provide everything you need for your industrial requirements
-                </p>
+<!-- ============================================================ -->
+<!-- PRODUCT SECTION - 2 cols mobile, 6 cols desktop            -->
+<!-- ============================================================ -->
+<section class="py-12 sm:py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-10 sm:mb-12 md:mb-16">
+            <div class="inline-block bg-red-100 text-secondary px-3 py-1 sm:px-4 rounded-full text-xs sm:text-sm font-bold mb-3 sm:mb-4">
+                OUR SPECIALIZATION
             </div>
-
-            <!-- Skeleton Loader (shows initially) -->
-            <div id="productSkeleton" class="grid grid-cols-2 md:grid-cols-6 gap-3 sm:gap-4 max-w-full mx-auto">
-                <!-- Repeat 18 times for skeleton -->
-                <div class="product-skeleton aspect-square"></div>
-                <div class="product-skeleton aspect-square"></div>
-                <div class="product-skeleton aspect-square"></div>
-                <div class="product-skeleton aspect-square"></div>
-                <div class="product-skeleton aspect-square"></div>
-                <div class="product-skeleton aspect-square"></div>
-                <div class="product-skeleton aspect-square"></div>
-                <div class="product-skeleton aspect-square"></div>
-                <div class="product-skeleton aspect-square"></div>
-                <div class="product-skeleton aspect-square"></div>
-                <div class="product-skeleton aspect-square"></div>
-                <div class="product-skeleton aspect-square"></div>
-                <div class="product-skeleton aspect-square hidden md:block"></div>
-                <div class="product-skeleton aspect-square hidden md:block"></div>
-                <div class="product-skeleton aspect-square hidden md:block"></div>
-                <div class="product-skeleton aspect-square hidden md:block"></div>
-                <div class="product-skeleton aspect-square hidden md:block"></div>
-                <div class="product-skeleton aspect-square hidden md:block"></div>
-            </div>
-
-            <!-- Actual Product Grid (hidden initially) -->
-            <div id="productGrid" class="grid grid-cols-2 md:grid-cols-6 gap-3 sm:gap-4 max-w-full mx-auto"
-                style="display: none;">
-
-                <!-- 1. Gate Valve -->
-                <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
-                    onclick="viewProduct('gate-valve')" style="animation-delay: 0.05s">
-                    <div
-                        class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
-                        <img src="./assets/images/Gate-Valve-1.png" alt="Gate Valve"
-                            class="w-full h-full object-contain" loading="lazy">
-                    </div>
-                    <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold">
-                        Gate Valve
-                    </div>
-                </div>
-
-                <!-- 2. Globe Valve -->
-                <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
-                    onclick="viewProduct('globe-valve')" style="animation-delay: 0.1s">
-                    <div
-                        class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
-                        <img src="./assets/images/Globe-Valve-1.png" alt="Globe Valve"
-                            class="w-full h-full object-contain" loading="lazy">
-                    </div>
-                    <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold">
-                        Globe Valve
-                    </div>
-                </div>
-
-                <!-- 3. Non Return Valve -->
-                <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
-                    onclick="viewProduct('non-return-valve')" style="animation-delay: 0.15s">
-                    <div
-                        class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
-                        <img src="./assets/images/Non-return-Valve-1.png" alt="Non Return Valve"
-                            class="w-full h-full object-contain" loading="lazy">
-                    </div>
-                    <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold">
-                        Non Return Valve
-                    </div>
-                </div>
-
-                <!-- 4. Ball Valve -->
-                <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
-                    onclick="viewProduct('ball-valve')" style="animation-delay: 0.2s">
-                    <div
-                        class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
-                        <img src="./assets/images/Ball-Valve.png" alt="Ball Valve" class="w-full h-full object-contain"
-                            loading="lazy">
-                    </div>
-                    <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold">
-                        Ball Valve
-                    </div>
-                </div>
-
-                <!-- 5. Butterfly Valve -->
-                <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
-                    onclick="viewProduct('butterfly-valve')" style="animation-delay: 0.25s">
-                    <div
-                        class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
-                        <img src="./assets/images/Butterfly-Valve.png" alt="Butterfly Valve"
-                            class="w-full h-full object-contain" loading="lazy">
-                    </div>
-                    <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold">
-                        Butterfly Valve
-                    </div>
-                </div>
-
-                <!-- 6. Knife Edge Gate Valve -->
-                <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
-                    onclick="viewProduct('knife-edge-gate-valve')" style="animation-delay: 0.3s">
-                    <div
-                        class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
-                        <img src="./assets/images/knife-Edge-gate-valve.png" alt="Knife Edge Gate Valve"
-                            class="w-full h-full object-contain" loading="lazy">
-                    </div>
-                    <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold">
-                        Knife Edge Gate
-                    </div>
-                </div>
-
-                <!-- 7. Piston Valve -->
-                <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
-                    onclick="viewProduct('piston-valve')" style="animation-delay: 0.35s">
-                    <div
-                        class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
-                        <img src="./assets/images/piston-valve.png" alt="Piston Valve"
-                            class="w-full h-full object-contain" loading="lazy">
-                    </div>
-                    <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold">
-                        Piston Valve
-                    </div>
-                </div>
-
-                <!-- 8. Plug Valve -->
-                <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
-                    onclick="viewProduct('plug-valve')" style="animation-delay: 0.4s">
-                    <div
-                        class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
-                        <img src="./assets/images/Plug-Valve.png" alt="Plug Valve" class="w-full h-full object-contain"
-                            loading="lazy">
-                    </div>
-                    <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold">
-                        Plug Valve
-                    </div>
-                </div>
-
-                <!-- 9. Diaphragm Valve -->
-                <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
-                    onclick="viewProduct('diaphragm-valve')" style="animation-delay: 0.45s">
-                    <div
-                        class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
-                        <img src="./assets/images/Diaphagram-valves.jpg" alt="Diaphragm Valve"
-                            class="w-full h-full object-contain" loading="lazy">
-                    </div>
-                    <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold">
-                        Diaphragm Valve
-                    </div>
-                </div>
-
-                <!-- 10. Strainer -->
-                <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
-                    onclick="viewProduct('strainer')" style="animation-delay: 0.5s">
-                    <div
-                        class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
-                        <img src="./assets/images/Strainers.png" alt="Strainer" class="w-full h-full object-contain"
-                            loading="lazy">
-                    </div>
-                    <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold">
-                        Strainers
-                    </div>
-                </div>
-
-                <!-- 11. Safety Valves -->
-                <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
-                    onclick="viewProduct('safety-valve')" style="animation-delay: 0.55s">
-                    <div
-                        class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
-                        <img src="./assets/images/Safety-Valves.png" alt="Safety Valves"
-                            class="w-full h-full object-contain" loading="lazy">
-                    </div>
-                    <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold">
-                        Safety Valves
-                    </div>
-                </div>
-
-                <!-- 12. PRV -->
-                <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
-                    onclick="viewProduct('prv')" style="animation-delay: 0.6s">
-                    <div
-                        class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
-                        <img src="./assets/images/PRV.png" alt="PRV" class="w-full h-full object-contain"
-                            loading="lazy">
-                    </div>
-                    <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold">
-                        PRV
-                    </div>
-                </div>
-
-                <!-- 13. Air Valves (Desktop only - row 3) -->
-                <div class="product-item hidden md:block group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
-                    onclick="viewProduct('air-valve')" style="animation-delay: 0.65s">
-                    <div
-                        class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
-                        <img src="./assets/images/Air-alves.png" alt="Air Valves" class="w-full h-full object-contain"
-                            loading="lazy">
-                    </div>
-                    <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold">
-                        Air Valves
-                    </div>
-                </div>
-
-                <!-- 14. Flanges (Desktop only - row 3) -->
-                <div class="product-item hidden md:block group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
-                    onclick="viewProduct('flanges')" style="animation-delay: 0.7s">
-                    <div
-                        class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
-                        <img src="./assets/images/Flanges.png" alt="Flanges" class="w-full h-full object-contain"
-                            loading="lazy">
-                    </div>
-                    <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold">
-                        Flanges
-                    </div>
-                </div>
-
-                <!-- 15. MS Pipes Fittings (Desktop only - row 3) -->
-                <div class="product-item hidden md:block group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
-                    onclick="viewProduct('ms-pipes')" style="animation-delay: 0.75s">
-                    <div
-                        class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
-                        <img src="./assets/images/MS-pipes-Fittings.png" alt="MS Pipes Fittings"
-                            class="w-full h-full object-contain" loading="lazy">
-                    </div>
-                    <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold">
-                        MS Pipes
-                    </div>
-                </div>
-
-                <!-- 16. IBR Pipes Fittings (Desktop only - row 3) -->
-                <div class="product-item hidden md:block group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
-                    onclick="viewProduct('ibr-pipes')" style="animation-delay: 0.8s">
-                    <div
-                        class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
-                        <img src="./assets/images/IBR-Pipes-Fittings.png" alt="IBR Pipes Fittings"
-                            class="w-full h-full object-contain" loading="lazy">
-                    </div>
-                    <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold">
-                        IBR Pipes
-                    </div>
-                </div>
-
-                <!-- 17. GI Pipes Fittings (Desktop only - row 3) -->
-                <div class="product-item hidden md:block group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
-                    onclick="viewProduct('gi-pipes')" style="animation-delay: 0.85s">
-                    <div
-                        class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
-                        <img src="./assets/images/GI-pipes-Fittings.png" alt="GI Pipes Fittings"
-                            class="w-full h-full object-contain" loading="lazy">
-                    </div>
-                    <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold">
-                        GI Pipes
-                    </div>
-                </div>
-
-                <!-- 18. SS Pipes Fittings (Desktop only - row 3) -->
-                <div class="product-item hidden md:block group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
-                    onclick="viewProduct('ss-pipes')" style="animation-delay: 0.9s">
-                    <div
-                        class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
-                        <img src="./assets/images/SS-Pipes-Fittings.png" alt="SS Pipes Fittings"
-                            class="w-full h-full object-contain" loading="lazy">
-                    </div>
-                    <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold">
-                        SS Pipes
-                    </div>
-                </div>
-
-            </div>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-3 sm:mb-4 px-4">
+                Complete Product Range</h2>
+            <p class="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
+                From valves to fittings, we provide everything you need for your industrial requirements
+            </p>
         </div>
-    </section>
+
+        <!-- Skeleton Loader -->
+        <div id="productSkeleton" class="grid grid-cols-2 md:grid-cols-6 gap-3 sm:gap-4 max-w-full mx-auto">
+            <div class="product-skeleton aspect-square"></div>
+            <div class="product-skeleton aspect-square"></div>
+            <div class="product-skeleton aspect-square"></div>
+            <div class="product-skeleton aspect-square"></div>
+            <div class="product-skeleton aspect-square"></div>
+            <div class="product-skeleton aspect-square"></div>
+            <div class="product-skeleton aspect-square"></div>
+            <div class="product-skeleton aspect-square"></div>
+            <div class="product-skeleton aspect-square"></div>
+            <div class="product-skeleton aspect-square"></div>
+            <div class="product-skeleton aspect-square"></div>
+            <div class="product-skeleton aspect-square"></div>
+            <div class="product-skeleton aspect-square"></div>
+            <div class="product-skeleton aspect-square"></div>
+            <div class="product-skeleton aspect-square"></div>
+            <div class="product-skeleton aspect-square"></div>
+            <div class="product-skeleton aspect-square"></div>
+            <div class="product-skeleton aspect-square"></div>
+        </div>
+
+        <!-- Actual Product Grid -->
+        <div id="productGrid" class="grid grid-cols-2 md:grid-cols-6 gap-3 sm:gap-4 max-w-full mx-auto" style="display: none;">
+
+            <!-- 1. Gate Valve -->
+            <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
+                onclick="viewProduct('gate-valve')" style="animation-delay: 0.05s">
+                <div class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
+                    <img src="./assets/images/Gate-Valve-1.png" alt="Gate Valve" class="w-full h-full object-contain" loading="lazy">
+                </div>
+                <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[9px] sm:text-xs font-bold truncate px-1">
+                    Gate Valve
+                </div>
+            </div>
+
+            <!-- 2. Globe Valve -->
+            <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
+                onclick="viewProduct('globe-valve')" style="animation-delay: 0.1s">
+                <div class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
+                    <img src="./assets/images/Globe-Valve-1.png" alt="Globe Valve" class="w-full h-full object-contain" loading="lazy">
+                </div>
+                <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[9px] sm:text-xs font-bold truncate px-1">
+                    Globe Valve
+                </div>
+            </div>
+
+            <!-- 3. Non Return Valve -->
+            <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
+                onclick="viewProduct('non-return-valve')" style="animation-delay: 0.15s">
+                <div class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
+                    <img src="./assets/images/Non-return-Valve-1.png" alt="Non Return Valve" class="w-full h-full object-contain" loading="lazy">
+                </div>
+                <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[9px] sm:text-xs font-bold truncate px-1">
+                    Non Return
+                </div>
+            </div>
+
+            <!-- 4. Ball Valve -->
+            <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
+                onclick="viewProduct('ball-valve')" style="animation-delay: 0.2s">
+                <div class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
+                    <img src="./assets/images/Ball-Valve.png" alt="Ball Valve" class="w-full h-full object-contain" loading="lazy">
+                </div>
+                <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[9px] sm:text-xs font-bold truncate px-1">
+                    Ball Valve
+                </div>
+            </div>
+
+            <!-- 5. Butterfly Valve -->
+            <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
+                onclick="viewProduct('butterfly-valve')" style="animation-delay: 0.25s">
+                <div class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
+                    <img src="./assets/images/Butterfly-Valve.png" alt="Butterfly Valve" class="w-full h-full object-contain" loading="lazy">
+                </div>
+                <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[9px] sm:text-xs font-bold truncate px-1">
+                    Butterfly
+                </div>
+            </div>
+
+            <!-- 6. Knife Edge Gate Valve -->
+            <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
+                onclick="viewProduct('knife-edge-gate-valve')" style="animation-delay: 0.3s">
+                <div class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
+                    <img src="./assets/images/knife-Edge-gate-valve.png" alt="Knife Edge Gate Valve" class="w-full h-full object-contain" loading="lazy">
+                </div>
+                <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[9px] sm:text-xs font-bold truncate px-1">
+                    Knife Edge
+                </div>
+            </div>
+
+            <!-- 7. Piston Valve -->
+            <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
+                onclick="viewProduct('piston-valve')" style="animation-delay: 0.35s">
+                <div class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
+                    <img src="./assets/images/piston-valve.png" alt="Piston Valve" class="w-full h-full object-contain" loading="lazy">
+                </div>
+                <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[9px] sm:text-xs font-bold truncate px-1">
+                    Piston Valve
+                </div>
+            </div>
+
+            <!-- 8. Plug Valve -->
+            <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
+                onclick="viewProduct('plug-valve')" style="animation-delay: 0.4s">
+                <div class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
+                    <img src="./assets/images/Plug-Valve.png" alt="Plug Valve" class="w-full h-full object-contain" loading="lazy">
+                </div>
+                <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[9px] sm:text-xs font-bold truncate px-1">
+                    Plug Valve
+                </div>
+            </div>
+
+            <!-- 9. Diaphragm Valve -->
+            <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
+                onclick="viewProduct('diaphragm-valve')" style="animation-delay: 0.45s">
+                <div class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
+                    <img src="./assets/images/Diaphagram-valves.jpg" alt="Diaphragm Valve" class="w-full h-full object-contain" loading="lazy">
+                </div>
+                <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[9px] sm:text-xs font-bold truncate px-1">
+                    Diaphragm
+                </div>
+            </div>
+
+            <!-- 10. Strainer -->
+            <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
+                onclick="viewProduct('strainer')" style="animation-delay: 0.5s">
+                <div class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
+                    <img src="./assets/images/Strainers.png" alt="Strainer" class="w-full h-full object-contain" loading="lazy">
+                </div>
+                <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[9px] sm:text-xs font-bold truncate px-1">
+                    Strainers
+                </div>
+            </div>
+
+            <!-- 11. Safety Valves -->
+            <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
+                onclick="viewProduct('safety-valve')" style="animation-delay: 0.55s">
+                <div class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
+                    <img src="./assets/images/Safety-Valves.png" alt="Safety Valves" class="w-full h-full object-contain" loading="lazy">
+                </div>
+                <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[9px] sm:text-xs font-bold truncate px-1">
+                    Safety Valve
+                </div>
+            </div>
+
+            <!-- 12. PRV -->
+            <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
+                onclick="viewProduct('prv')" style="animation-delay: 0.6s">
+                <div class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
+                    <img src="./assets/images/PRV.png" alt="PRV" class="w-full h-full object-contain" loading="lazy">
+                </div>
+                <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[9px] sm:text-xs font-bold truncate px-1">
+                    PRV
+                </div>
+            </div>
+
+            <!-- 13. Air Valves -->
+            <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
+                onclick="viewProduct('air-valve')" style="animation-delay: 0.65s">
+                <div class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
+                    <img src="./assets/images/Air-alves.png" alt="Air Valves" class="w-full h-full object-contain" loading="lazy">
+                </div>
+                <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[9px] sm:text-xs font-bold truncate px-1">
+                    Air Valves
+                </div>
+            </div>
+
+            <!-- 14. Flanges -->
+            <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
+                onclick="viewProduct('flanges')" style="animation-delay: 0.7s">
+                <div class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
+                    <img src="./assets/images/Flanges.png" alt="Flanges" class="w-full h-full object-contain" loading="lazy">
+                </div>
+                <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[9px] sm:text-xs font-bold truncate px-1">
+                    Flanges
+                </div>
+            </div>
+
+            <!-- 15. MS Pipes -->
+            <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
+                onclick="viewProduct('ms-pipes')" style="animation-delay: 0.75s">
+                <div class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
+                    <img src="./assets/images/MS-pipes-Fittings.png" alt="MS Pipes Fittings" class="w-full h-full object-contain" loading="lazy">
+                </div>
+                <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[9px] sm:text-xs font-bold truncate px-1">
+                    MS Pipes
+                </div>
+            </div>
+
+            <!-- 16. IBR Pipes -->
+            <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
+                onclick="viewProduct('ibr-pipes')" style="animation-delay: 0.8s">
+                <div class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
+                    <img src="./assets/images/IBR-Pipes-Fittings.png" alt="IBR Pipes Fittings" class="w-full h-full object-contain" loading="lazy">
+                </div>
+                <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[9px] sm:text-xs font-bold truncate px-1">
+                    IBR Pipes
+                </div>
+            </div>
+
+            <!-- 17. GI Pipes -->
+            <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
+                onclick="viewProduct('gi-pipes')" style="animation-delay: 0.85s">
+                <div class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
+                    <img src="./assets/images/GI-pipes-Fittings.png" alt="GI Pipes Fittings" class="w-full h-full object-contain" loading="lazy">
+                </div>
+                <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[9px] sm:text-xs font-bold truncate px-1">
+                    GI Pipes
+                </div>
+            </div>
+
+            <!-- 18. SS Pipes -->
+            <div class="product-item group bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-red-200 hover:border-secondary cursor-pointer transform hover:scale-105"
+                onclick="viewProduct('ss-pipes')" style="animation-delay: 0.9s">
+                <div class="aspect-square bg-white flex items-center justify-center p-2 group-hover:bg-gray-50 transition">
+                    <img src="./assets/images/SS-Pipes-Fittings.png" alt="SS Pipes Fittings" class="w-full h-full object-contain" loading="lazy">
+                </div>
+                <div class="bg-primary text-white text-center py-1.5 sm:py-2 text-[9px] sm:text-xs font-bold truncate px-1">
+                    SS Pipes
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
 
 
     <!-- ============================================================ -->
     <!-- BRANDS SECTION - TEXT-BASED BADGES                           -->
     <!-- ============================================================ -->
-   <section class="py-8 bg-gradient-to-br from-primary to-primary-dark">
+<!-- 
+=================================================================
+COPY-PASTE READY: Brands Section with Click → brands.php redirect
+SIRF YEH 2 CHEEZEIN CHANGE KI HAIN:
+1. Har brand div pe onclick="window.location.href='brands.php'" add kiya
+2. cursor-pointer already tha, ab actually kaam karega
+=================================================================
+-->
+
+<section class="py-8 bg-gradient-to-br from-primary to-primary-dark">
     <div class="container mx-auto px-4">
 
-        <!-- Section Header -->
+        <!-- Section Header - "View All Brands" button bhi add kiya -->
         <div class="text-center mb-10 sm:mb-12">
             <div class="inline-block bg-white/20 text-white px-4 py-1 rounded-full text-sm font-bold mb-4">
                 TRUSTED BRANDS
@@ -848,6 +850,7 @@
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3">
                 Our Brand Partners
             </h2>
+            <p class="text-white/75 text-sm mt-2">Click any brand to explore our complete partner network</p>
         </div>
 
         <!-- Brands Slider -->
@@ -857,166 +860,166 @@
                 <!-- ===== FIRST SET ===== -->
                 <div class="flex items-center gap-10 sm:gap-14 animate-scroll">
 
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Aeroflex pneumatics logo.png" alt="Aeroflex" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Aira euro automation logo.png" alt="Aira Euro Automation" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Airmax pneumatics.png" alt="Airmax Pneumatics" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Akari Pneumatics.png" alt="Akari Pneumatics" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Akvalo-Photoroom.png" alt="Akvalo" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Alto Valves.png" alt="Alto Valves" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Arbuda Instruments logo-Photoroom.png" alt="Arbuda Instruments" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Armor Fire logo 2.png" alt="Armor Fire" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Armor Fire Logo.png" alt="Armor Fire Logo" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/B&M Forge fittings.png" alt="B&M Forge Fittings" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Baumer_Logo.svg.png" alt="Baumer" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Cair.png" alt="Cair" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/cropped-kimax-logo-1-1-162x54.png" alt="Kimax" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Danfoss Logo.png" alt="Danfoss" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Dowty Hydraulics-Photoroom.png" alt="Dowty Hydraulics" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Easyflex.png" alt="Easyflex" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Eaton Logo.png" alt="Eaton" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Elems -Photoroom.png" alt="Elems" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/festo.png" alt="Festo" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Force logo-Photoroom.png" alt="Force" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Gokul Poly Valves.png" alt="Gokul Poly Valves" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
-                        <img src="assets/images/ITClogos/hawa engineering.png" alt="Hawa Engineering" class="h-16 w-36 object-contain">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
+                       <img src="assets/images/ITClogos/hawa engineering.png" alt="Hawa Engineering" style="height:80px !important;width:150px !important;object-fit:contain;">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/hydint-Photoroom.png" alt="Hydint" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
-                        <img src="assets/images/ITClogos/Hydroline products logo.png" alt="Hydroline" class="h-16 w-36 object-contain">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
+                        <img src="assets/images/ITClogos/Hydroline products logo.png" alt="Hydroline" style="height:85px !important;width:160px !important;object-fit:contain;">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Jacktech Hydraulics.png" alt="Jacktech Hydraulics" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/janatics.png" alt="Janatics" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Kartar.png" alt="Kartar" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Koojan Hydraulcis logo 2.png" alt="Koojan Hydraulics" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/kranti.png" alt="Kranti" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Logo_Force.png" alt="Force" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Mahavir Valves Logo.png" alt="Mahavir Valves" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/marck logos.png" alt="Marck" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Mercury logo 2.png" alt="Mercury" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Mercury Logo.png" alt="Mercury Logo" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/MSL Logo.png" alt="MSL" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Newage Fire fighting co. ltd logo.png" alt="Newage Fire Fighting" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Normex Valves Logo.png" alt="Normex Valves" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/PMW .png" alt="PMW" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Polyhose logo.png" alt="Polyhose" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Polyhydron Logo.png" alt="Polyhydron" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Qinn Logo.png" alt="Qinn" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Rajdeep.png" alt="Rajdeep" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Shital metal products.png" alt="Shital Metal Products" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Supremo Gear Pumps.png" alt="Supremo Gear Pumps" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Surya Prakash steel tubes logo.png" alt="Surya Prakash" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Suzhik Valves (2).png" alt="Suzhik Valves" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Techno Pneumatics logo.png" alt="Techno Pneumatics" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Torque-Photoroom.png" alt="Torque" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/UPC Logo.png" alt="UPC" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/UPC Valves Logo.png" alt="UPC Valves" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/VBC hydraulics.png" alt="VBC Hydraulics" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/veljan.png" alt="Veljan" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Vickers logo.png" alt="Vickers" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Yuken Logo.png" alt="Yuken" class="h-16 w-36 object-contain">
                     </div>
 
@@ -1026,166 +1029,166 @@
                 <!-- ===== DUPLICATE SET FOR SEAMLESS LOOP ===== -->
                 <div class="flex items-center gap-10 sm:gap-14 animate-scroll" aria-hidden="true">
 
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Aeroflex pneumatics logo.png" alt="Aeroflex" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Aira euro automation logo.png" alt="Aira Euro Automation" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Airmax pneumatics.png" alt="Airmax Pneumatics" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Akari Pneumatics.png" alt="Akari Pneumatics" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Akvalo-Photoroom.png" alt="Akvalo" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Alto Valves.png" alt="Alto Valves" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Arbuda Instruments logo-Photoroom.png" alt="Arbuda Instruments" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Armor Fire logo 2.png" alt="Armor Fire" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Armor Fire Logo.png" alt="Armor Fire Logo" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/B&M Forge fittings.png" alt="B&M Forge Fittings" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Baumer_Logo.svg.png" alt="Baumer" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Cair.png" alt="Cair" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/cropped-kimax-logo-1-1-162x54.png" alt="Kimax" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Danfoss Logo.png" alt="Danfoss" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Dowty Hydraulics-Photoroom.png" alt="Dowty Hydraulics" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Easyflex.png" alt="Easyflex" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Eaton Logo.png" alt="Eaton" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Elems-Photoroom.png" alt="Elems" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/festo.png" alt="Festo" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Force logo-Photoroom.png" alt="Force" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Gokul Poly Valves.png" alt="Gokul Poly Valves" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
-                        <img src="assets/images/ITClogos/hawa engineering.png" alt="Hawa Engineering" class="h-16 w-36 object-contain">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
+                        <img src="assets/images/ITClogos/hawa engineering.png" alt="Hawa Engineering" class="h-16 w-36 object-contain" style="height:85px !important; width:160px !important;">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/hydint-Photoroom.png" alt="Hydint" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Hydroline products logo.png" alt="Hydroline" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Jacktech Hydraulics.png" alt="Jacktech Hydraulics" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/janatics.png" alt="Janatics" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Kartar.png" alt="Kartar" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Koojan Hydraulcis logo 2.png" alt="Koojan Hydraulics" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/kranti.png" alt="Kranti" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Logo_Force.png" alt="Force" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Mahavir Valves Logo.png" alt="Mahavir Valves" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/marck logos.png" alt="Marck" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Mercury logo 2.png" alt="Mercury" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Mercury Logo.png" alt="Mercury Logo" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/MSL Logo.png" alt="MSL" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Newage Fire fighting co. ltd logo.png" alt="Newage Fire Fighting" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Normex Valves Logo.png" alt="Normex Valves" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/PMW.png" alt="PMW" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Polyhose logo.png" alt="Polyhose" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Polyhydron Logo.png" alt="Polyhydron" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Qinn Logo.png" alt="Qinn" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Rajdeep.png" alt="Rajdeep" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Shital metal products.png" alt="Shital Metal Products" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Supremo Gear Pumps.png" alt="Supremo Gear Pumps" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Surya Prakash steel tubes logo.png" alt="Surya Prakash" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Suzhik Valves (2).png" alt="Suzhik Valves" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Techno Pneumatics logo.png" alt="Techno Pneumatics" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Torque-Photoroom.png" alt="Torque" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/UPC Logo.png" alt="UPC" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/UPC Valves Logo.png" alt="UPC Valves" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/VBC hydraulics.png" alt="VBC Hydraulics" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/veljan.png" alt="Veljan" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Vickers logo.png" alt="Vickers" class="h-16 w-36 object-contain">
                     </div>
-                    <div class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center">
+                    <div onclick="window.location.href='brands.php'" class="flex-shrink-0 bg-white rounded-2xl px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 min-w-[160px] flex items-center justify-center cursor-pointer">
                         <img src="assets/images/ITClogos/Yuken Logo.png" alt="Yuken" class="h-16 w-36 object-contain">
                     </div>
 
@@ -1193,6 +1196,17 @@
                 <!-- END DUPLICATE SET -->
 
             </div>
+        </div>
+
+        <!-- View All Brands Button -->
+        <div class="text-center mt-10">
+            <a href="brands.php"
+               class="inline-flex items-center gap-2 bg-white text-primary font-bold px-8 py-3 rounded-full hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                View All Brand Partners
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
         </div>
 
     </div>
@@ -2103,7 +2117,7 @@
                         </p>
 
                         <!-- Read More Button -->
-                        <a href="blog-details.php?id=1"
+                        <a href="blog.php"
                             class="inline-flex items-center text-primary font-semibold text-sm hover:text-secondary transition-colors duration-300 group">
                             <span>Read More</span>
                             <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"
@@ -2159,7 +2173,7 @@
                             performance. Step-by-step maintenance procedures included.
                         </p>
 
-                        <a href="blog-details.php?id=2"
+                        <a href="blog.php"
                             class="inline-flex items-center text-primary font-semibold text-sm hover:text-secondary transition-colors duration-300 group">
                             <span>Read More</span>
                             <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"
@@ -2215,7 +2229,7 @@
                             compliance matters and how to choose certified products.
                         </p>
 
-                        <a href="blog-details.php?id=3"
+                        <a href="blog.php"
                             class="inline-flex items-center text-primary font-semibold text-sm hover:text-secondary transition-colors duration-300 group">
                             <span>Read More</span>
                             <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"
@@ -2231,7 +2245,7 @@
 
             <!-- View All Button -->
             <div class="text-center">
-                <a href="/"
+                <a href="blog.php"
                     class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                     <span>View All Articles</span>
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2353,31 +2367,6 @@
         console.log('âœ“ Responsive banner initialized - ' + bannerSlides.length + ' slides');
     })();
     </script>
-
-    <!-- JavaScript for Product Loading -->
-    <script>
-    // Product Loading with Skeleton
-    (function() {
-        // Simulate loading delay (remove this in production if data loads instantly)
-        setTimeout(function() {
-            // Hide skeleton
-            document.getElementById('productSkeleton').style.display = 'none';
-
-            // Show actual products
-            document.getElementById('productGrid').style.display = 'grid';
-
-            console.log('âœ“ Products loaded - 18 items (12 mobile, 18 desktop)');
-        }, 800); // 800ms loading time
-    })();
-
-    /**
-     * Navigate to product details page
-     * @param {string} productSlug - The product identifier (URL-friendly name)
-     */
-    function viewProduct(productSlug) {
-        window.location.href = 'product_details.php?product=' + productSlug;
-    }
-    </script>
     <!-- ============================================================ -->
     <!-- REVIEW CAROUSEL JAVASCRIPT                                   -->
     <!-- ============================================================ -->
@@ -2494,6 +2483,20 @@
     console.log('✓ Brand scroll continuous loop started');
 })();
 </script>
+
+<script>
+(function() {
+    setTimeout(function() {
+        document.getElementById('productSkeleton').style.display = 'none';
+        document.getElementById('productGrid').style.display = 'grid';
+    }, 800);
+})();
+
+function viewProduct(productSlug) {
+    window.location.href = 'product_details.php?product=' + productSlug;
+}
+</script>
+
 
 </body>
 

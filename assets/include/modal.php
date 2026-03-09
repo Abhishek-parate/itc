@@ -36,17 +36,7 @@
                         placeholder="Enter your name">
                 </div>
 
-                <!-- Email -->
-                <div>
-                    <label class="block text-gray-700 font-semibold mb-1.5 text-sm">Email Address <span class="text-red-500">*</span></label>
-                    <input 
-                        type="email" 
-                        name="email"
-                        required 
-                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm" 
-                        placeholder="your@email.com">
-                </div>
-
+               
                 <!-- Phone -->
                 <div>
                     <label class="block text-gray-700 font-semibold mb-1.5 text-sm">Phone Number <span class="text-red-500">*</span></label>

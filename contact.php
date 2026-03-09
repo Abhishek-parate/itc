@@ -209,11 +209,6 @@
                     </div>
 
                     <div>
-                        <label class="block text-gray-700 font-semibold mb-2">Email Address *</label>
-                        <input type="email" name="email" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
-                    </div>
-
-                    <div>
                         <label class="block text-gray-700 font-semibold mb-2">Phone Number *</label>
                         <input type="tel" name="phone" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
                     </div>
