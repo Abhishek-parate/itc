@@ -620,7 +620,26 @@
             .cta-section { padding: 20px 16px; }
             .hint-text { display: none !important; }
         }
+        /* ===================================================
+   INFRA GRID — PROPER 6-IMAGE MOSAIC (DESKTOP)
+   Layout:
+   [ IMG-1 (tall) ][ IMG-2 ][ IMG-3 ]
+   [ IMG-1 (tall) ][ IMG-4 ][ IMG-5 ]
+   [ IMG-6 (full width bottom) ]
+   =================================================== */
+.infra-grid {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr 1.2fr;
+    grid-template-rows: 250px 200px 180px;
+    gap: 10px;
+}
 
+.ii-1 { grid-column: 1 / 2;   grid-row: 1 / 3; }  /* Left tall hero */
+.ii-2 { grid-column: 2 / 3;   grid-row: 1; }       /* Top middle */
+.ii-3 { grid-column: 3 / 4;   grid-row: 1; }       /* Top right */
+.ii-4 { grid-column: 2 / 3;   grid-row: 2; }       /* Bottom middle */
+.ii-5 { grid-column: 3 / 4;   grid-row: 2; }       /* Bottom right */
+.ii-6 { grid-column: 1 / 4;   grid-row: 3; }       /* Full width bottom */
         /* =====================================================
            VERY SMALL: < 360px
            ===================================================== */
@@ -630,6 +649,18 @@
             .bi-1, .bi-2, .bi-3, .bi-4, .bi-5,
             .bi-6, .bi-7, .bi-8, .bi-9 { height: 115px !important; }
         }
+        @media (max-width: 1024px) {
+    .infra-grid {
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: 220px 180px 180px !important;
+    }
+    .ii-1 { grid-column: 1 / 3 !important; grid-row: 1 !important; }
+    .ii-2 { grid-column: 1 / 2 !important; grid-row: 2 !important; }
+    .ii-3 { grid-column: 2 / 3 !important; grid-row: 2 !important; }
+    .ii-4 { grid-column: 1 / 2 !important; grid-row: 3 !important; }
+    .ii-5 { grid-column: 2 / 3 !important; grid-row: 3 !important; }
+    .ii-6 { grid-column: 1 / 3 !important; grid-row: 4 !important; height: 160px !important; }
+}
     </style>
 </head>
 <body>
