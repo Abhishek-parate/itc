@@ -301,7 +301,7 @@
     max-width: 150px !important;
     max-height: 80px !important;
     object-fit: contain !important;
-    transform: scale(1.9) !important;
+    transform: scale(1.2) !important;
 }
 
 </style>
