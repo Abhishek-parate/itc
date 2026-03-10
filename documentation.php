@@ -45,6 +45,15 @@
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <style>
+          .step-item {
+        opacity: 0;
+        animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
     .page-banner {
         height: 220px;
     }
@@ -75,6 +84,21 @@
     @media (min-width: 1440px) {
         .page-banner {
             height: 550px;
+        }
+    }
+     .lazy-load {
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 </style>
@@ -444,15 +468,7 @@
     </div>
 </section>
 
-<script>
-function openQuoteModal() {
-    const modal = document.getElementById('quoteModal');
-    if (modal) {
-        modal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-    }
-}
-</script>
+
 
 <section class="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-white via-gray-50 to-white lazy-load">
     <div class="container mx-auto px-4">
@@ -919,50 +935,7 @@ function openQuoteModal() {
     </div>
 </section>
 
-<style>
-    .lazy-load {
-        opacity: 0;
-        animation: fadeInUp 0.8s ease-out forwards;
-    }
 
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-</style>
-
-<script>
-// Intersection Observer for lazy loading
-document.addEventListener('DOMContentLoaded', function() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    document.querySelectorAll('.lazy-load').forEach(el => {
-        observer.observe(el);
-    });
-});
-
-function openQuoteModal() {
-    const modal = document.getElementById('quoteModal');
-    if (modal) {
-        modal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-    }
-}
-</script>
 
 
 <!-- Documentation Types Grid -->
@@ -1587,19 +1560,32 @@ function openQuoteModal() {
    
     </div>
 </section>
+<!-- CTA Section -->
+<section class="bg-gradient-to-r from-primary via-blue-900 to-blue-800 text-white py-16 lazy-load">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Need Specific Documentation?</h2>
+        <p class="text-xl mb-8 text-blue-100">Contact our documentation team for customized certificate requirements</p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <button onclick="openQuoteModal()" class="bg-gradient-to-r from-secondary to-red-700 text-white px-8 py-3 rounded-lg font-bold hover:from-red-700 hover:to-secondary transition-all transform hover:scale-105 shadow-lg">
+                Request Documents
+            </button>
+            <a href="contact.php" class="bg-white hover:bg-gray-100 text-primary font-bold px-8 py-3 rounded-lg transition transform hover:scale-105 shadow-xl">
+                Contact Us
+            </a>
+        </div>
+    </div>
+</section>
 
-<style>
-    .step-item {
-        opacity: 0;
-        animation: fadeInUp 0.6s ease-out forwards;
+<?php include 'assets/include/footer.php'; ?>
+<script>
+function openQuoteModal() {
+    const modal = document.getElementById('quoteModal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
     }
-
-    @keyframes fadeInUp {
-        0% { opacity: 0; transform: translateY(20px); }
-        100% { opacity: 1; transform: translateY(0); }
-    }
-</style>
-
+}
+</script>
 <script>
 // Intersection Observer for animations
 document.addEventListener('DOMContentLoaded', function() {
@@ -1627,27 +1613,6 @@ function openQuoteModal() {
     }
 }
 </script>
-
-
-
-<!-- CTA Section -->
-<section class="bg-gradient-to-r from-primary via-blue-900 to-blue-800 text-white py-16 lazy-load">
-    <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Need Specific Documentation?</h2>
-        <p class="text-xl mb-8 text-blue-100">Contact our documentation team for customized certificate requirements</p>
-        <div class="flex flex-wrap justify-center gap-4">
-            <button onclick="openQuoteModal()" class="bg-gradient-to-r from-secondary to-red-700 text-white px-8 py-3 rounded-lg font-bold hover:from-red-700 hover:to-secondary transition-all transform hover:scale-105 shadow-lg">
-                Request Documents
-            </button>
-            <a href="contact.php" class="bg-white hover:bg-gray-100 text-primary font-bold px-8 py-3 rounded-lg transition transform hover:scale-105 shadow-xl">
-                Contact Us
-            </a>
-        </div>
-    </div>
-</section>
-
-<?php include 'assets/include/footer.php'; ?>
-
 <script>
 // ==========================================
 // IMAGE LAZY LOADING - PRIORITY LOAD
@@ -1787,6 +1752,32 @@ document.addEventListener('keydown', function(e) {
 // Console log for debugging
 console.log('✓ Documentation page loaded');
 console.log('✓ Lazy loading initialized');
+</script>
+<script>
+// Intersection Observer for lazy loading
+document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    document.querySelectorAll('.lazy-load').forEach(el => {
+        observer.observe(el);
+    });
+});
+
+function openQuoteModal() {
+    const modal = document.getElementById('quoteModal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+}
 </script>
 </body>
 </html>
