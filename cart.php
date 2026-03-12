@@ -2277,9 +2277,10 @@ html, body {
     z-index: 9999;
     background: #25D366;
     color: #fff;
-
-    width: 55px;
-    height: 55px;
+ bottom: 100px !important;
+  right: 30px !important;
+    width: 59px;
+    height: 59px;
 
     border-radius: 50%;
     display: flex;
@@ -2301,14 +2302,12 @@ html, body {
     height: 26px;
     flex-shrink: 0;
 }
-
 @media (max-width: 1023px) {
-    #wa-float-btn {
-        bottom: 90px; 
-        right: 14px;
-    }
+  #wa-float-btn {
+    bottom: 150px !important;
+    right: 14px !important;
+  }
 }
-
 
     </style>
 </head>

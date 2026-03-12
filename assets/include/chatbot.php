@@ -183,7 +183,7 @@
 /* Mobile */
 @media(max-width:480px){
     #itc-chat-window{width:calc(100vw - 16px);right:8px;bottom:86px;max-height:80vh;}
-    #itc-chat-btn{right:14px;bottom:18px;width:56px;height:56px;}
+    #itc-chat-btn{right:14px;bottom: 80px !important;width:56px;height:56px;}
 }
 </style>
 

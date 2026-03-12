@@ -224,7 +224,7 @@
                             </span>
                         </div>
                     </div>
-
+                     
                     <!-- Main Heading -->
                     <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
                         Leading Manufacturer of 
@@ -394,7 +394,7 @@
                             </div>
                             <p class="text-xs text-gray-600">Precision pipe fittings</p>
                         </div>
-
+                              
                         <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-4 rounded-2xl border border-purple-200 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
                             <div class="flex items-center gap-3 mb-2">
                                 <div class="w-10 h-10 bg-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -461,9 +461,9 @@
                     <div class="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-red-400 to-red-600 rounded-3xl opacity-20 blur-2xl -z-10"></div>
                     <div class="absolute -bottom-6 -left-6 w-40 h-40 bg-gradient-to-br from-orange-400 to-orange-600 rounded-3xl opacity-20 blur-2xl -z-10"></div>
                 </div>
-
+                
             </div>
-
+            
         </div>
     </div>
 </section>
