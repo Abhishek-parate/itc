@@ -2277,9 +2277,10 @@ html, body {
     z-index: 9999;
     background: #25D366;
     color: #fff;
-
-    width: 55px;
-    height: 55px;
+ bottom: 100px !important;
+  right: 30px !important;
+    width: 59px;
+    height: 59px;
 
     border-radius: 50%;
     display: flex;
@@ -2301,15 +2302,69 @@ html, body {
     height: 26px;
     flex-shrink: 0;
 }
-
 @media (max-width: 1023px) {
-    #wa-float-btn {
-        bottom: 90px; 
-        right: 14px;
-    }
+  #wa-float-btn {
+    bottom: 150px !important;
+    right: 14px !important;
+  }
+}
+/* ═══════════════════════════════════
+   MOB-DBAR — Mobile delivery tiles
+═══════════════════════════════════ */
+.mob-dbar {
+    display: none;
 }
 
-
+@media(max-width:860px) {
+    .mob-dbar {
+        display: block;
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+    }
+     .dbar {
+        display: none !important;
+    }
+    .mob-dbar-inner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        overflow-x: auto;
+    }
+    .mob-dbar-tile {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 10px 8px;
+        border-right: 1px solid var(--border);
+        flex-direction: column;
+        text-align: center;
+    }
+    .mob-dbar-icon {
+        width: 28px;
+        height: 28px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+    .mob-dbar-icon svg {
+        width: 14px;
+        height: 14px;
+    }
+    .mob-dbar-lbl {
+        font-size: 8px;
+        font-weight: 600;
+        color: var(--faint);
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        margin-bottom: 1px;
+    }
+    .mob-dbar-val {
+        font-size: 10px;
+        font-weight: 800;
+        color: var(--text);
+    }
+}
     </style>
 </head>
 
@@ -2468,20 +2523,60 @@ html, body {
             <span style="font-size:10px;font-weight:800;">Bulk Quote</span>
         </button>
     </div>
-
-    <!-- 6. LONG DESCRIPTION -->
-    <?php if(!empty($product['description'])): ?>
-    <div class="mob-about">
-        <div class="mob-about-title">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:13px;height:13px;color:var(--navy)">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-            </svg>
-            About This Product
+<!-- 5.5 DELIVERY INFO TILES — MOBILE ONLY -->
+<div class="mob-dbar">
+    <div class="mob-dbar-inner">
+        <div class="mob-dbar-tile">
+            <div class="mob-dbar-icon" style="background:#f0fdf4">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:#16a34a">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                </svg>
+            </div>
+            <div>
+                <div class="mob-dbar-lbl">Min. Order</div>
+                <div class="mob-dbar-val"><?= $product['min_order'] ?> <?= htmlspecialchars($product['min_order_unit']) ?></div>
+            </div>
         </div>
-        <p class="mob-about-text"><?= htmlspecialchars($product['description']) ?></p>
+        <div class="mob-dbar-tile">
+            <div class="mob-dbar-icon" style="background:#eff6ff">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:#2563eb">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM3 4h13l3 8H3z"/>
+                </svg>
+            </div>
+            <div>
+                <div class="mob-dbar-lbl">Delivery</div>
+                <div class="mob-dbar-val"><?= htmlspecialchars($product['delivery_days']) ?></div>
+            </div>
+        </div>
+        <div class="mob-dbar-tile">
+            <div class="mob-dbar-icon" style="background:#faf5ff">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:#9333ea">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+            </div>
+            <div>
+                <div class="mob-dbar-lbl">Warranty</div>
+                <div class="mob-dbar-val"><?= htmlspecialchars($product['warranty']) ?></div>
+            </div>
+        </div>
+        <div class="mob-dbar-tile" style="border-right:none">
+            <div class="mob-dbar-icon" style="background:#fff7ed">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color:#f97316">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                </svg>
+            </div>
+            <div>
+                <div class="mob-dbar-lbl">Certification</div>
+                <div class="mob-dbar-val"><?= htmlspecialchars($product['certification']) ?></div>
+            </div>
+        </div>
     </div>
-    <?php endif; ?>
+</div>
+   
 
 </div><!-- END mob-product-section -->
     <!-- ════════════════════════ HERO BAND ════════════════════════ -->
@@ -2749,7 +2844,19 @@ html, body {
                 </div>
             </div>
             <?php endif; ?>
-
+              <!-- 6. LONG DESCRIPTION -->
+    <?php if(!empty($product['description'])): ?>
+    <div class="mob-about">
+        <div class="mob-about-title">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:13px;height:13px;color:var(--navy)">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+            About This Product
+        </div>
+        <p class="mob-about-text"><?= htmlspecialchars($product['description']) ?></p>
+    </div>
+    <?php endif; ?>
             <!-- DESCRIPTION + FEATURES + APPLICATIONS TABS -->
             <div class="block au au4">
                 <div class="tabs-bar">
