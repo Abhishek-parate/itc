@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Feb 23, 2026 at 03:15 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- Host: localhost:3306
+-- Generation Time: Apr 22, 2026 at 01:28 PM
+-- Server version: 10.6.24-MariaDB-cll-lve
+-- PHP Version: 8.4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `itc_db`
+-- Database: `exboumml_itc_db`
 --
 
 -- --------------------------------------------------------
@@ -75,7 +75,8 @@ INSERT INTO `products` (`id`, `name`, `slug`, `subtitle`, `description`, `image`
 (11, 'MS Pipes & Fittings', 'ms-pipes-fittings', 'Mild Steel • ERW, Seamless', 'High-quality mild steel pipes for industrial applications, available in ERW and seamless grades. ISI certified for quality assurance.', './assets/images/MS-pipes-Fittings.png', 'Pipes & Fittings', 'POPULAR', 'bg-blue-600', 850.00, 12500.00, 994.00, 18.00, 1, 'In Stock', 'Ships within 24 hrs', 1, 1, 'Piece', '3–5 Days', 'Mfr. Terms', 'ISO Certified', 4.7, '2000+', 1, 11, '2026-02-23 08:26:18'),
 (12, 'SS Pipes & Fittings', 'ss-pipes-fittings', 'SS304, SS316, SS321', 'Premium stainless steel pipes and fittings in SS304, SS316, SS321 grades. Suitable for corrosive and hygienic applications.', './assets/images/SS-Pipes-Fittings.png', 'Pipes & Fittings', 'PREMIUM', 'bg-secondary', 2450.00, 35800.00, 2867.00, 18.00, 1, 'In Stock', 'Ships within 24 hrs', 1, 1, 'Piece', '3–5 Days', 'Mfr. Terms', 'ISO Certified', 4.8, '1500+', 1, 12, '2026-02-23 08:26:18'),
 (13, 'GI Pipes & Fittings', 'gi-pipes-fittings', 'Galvanized Iron, ISI Certified', 'ISI certified galvanized iron pipes for plumbing and industrial use. Hot-dip galvanized for superior corrosion protection.', './assets/images/GI-pipes-Fittings.png', 'Pipes & Fittings', 'ISI MARK', 'bg-green-600', 1200.00, 18900.00, 1404.00, 18.00, 1, 'In Stock', 'Ships within 24 hrs', 1, 1, 'Piece', '3–5 Days', 'Mfr. Terms', 'ISI Certified', 4.7, '1800+', 1, 13, '2026-02-23 08:26:18'),
-(14, 'SS-Pipes-Fittings #130', 'ss-pipes-fittings-130', 'IBR Approved • High Temperature', 'SS-Pipes-Fittings #130 is a premium-grade stainless steel piping component designed for high durability and reliable performance in demanding industrial environments. Manufactured using superior quality stainless steel, it ensures excellent corrosion resistance, structural strength, and long service life.\n\nThis product is ideal for applications that require leak-proof connections, smooth flow efficiency, and resistance to high pressure and temperature conditions. With precision engineering and quality finishing, SS-Pipes-Fittings #130 delivers consistent performance across various industrial sectors.', './assets/images/products/ss-pipes-fittings-130-1771848552.png', 'Pipes & Fittings', '', 'bg-orange-600', 1500.00, 2000.00, 3000.00, 20.00, 0, 'In Stock', 'Ships within 24 hrs', 1, 2, 'Piece', '5-7 Days', 'Mfr. Terms', 'ISO • IBR', 4.5, '100+ Orders', 1, 1, '2026-02-23 12:09:12');
+(14, 'SS-Pipes-Fittings #130', 'ss-pipes-fittings-130', 'IBR Approved • High Temperature', 'SS-Pipes-Fittings #130 is a premium-grade stainless steel piping component designed for high durability and reliable performance in demanding industrial environments. Manufactured using superior quality stainless steel, it ensures excellent corrosion resistance, structural strength, and long service life.\n\nThis product is ideal for applications that require leak-proof connections, smooth flow efficiency, and resistance to high pressure and temperature conditions. With precision engineering and quality finishing, SS-Pipes-Fittings #130 delivers consistent performance across various industrial sectors.', './assets/images/products/ss-pipes-fittings-130-1771848552.png', 'Pipes & Fittings', '', 'bg-orange-600', 1500.00, 2000.00, 3000.00, 20.00, 0, 'In Stock', 'Ships within 24 hrs', 1, 2, 'Piece', '5-7 Days', 'Mfr. Terms', 'ISO • IBR', 4.5, '100+ Orders', 1, 1, '2026-02-23 12:09:12'),
+(15, 'Indian Traders Corp', 'indian-traders-corp', 'IBR Approved • High Temperature', 'Indian Traders Corp offers a wide range of high-quality products designed to meet the needs of modern businesses and customers. Our product collection focuses on reliability, durability, and superior performance. Each product is carefully selected and tested to ensure the best quality standards. We are committed to delivering products that provide value, efficiency, and long-lasting performance for our customers across various industries.', './assets/images/products/indian-traders-corp-1772782606.png', 'Gate / Globe Valves', 'IBR', 'bg-orange-600', 9000.00, 10000.00, 9000.00, 18.00, 1, 'In Stock', 'Ships within 24 hrs', 1, 1, 'Piece', '5-7 Days', 'Mfr. Terms', 'ISO • IBR', 4.5, '100+ Orders', 1, 10, '2026-03-06 07:36:46');
 
 -- --------------------------------------------------------
 
@@ -172,7 +173,8 @@ INSERT INTO `product_applications` (`id`, `product_id`, `application`, `sort_ord
 (75, 13, 'Fire protection systems', 3),
 (76, 13, 'Agriculture irrigation', 4),
 (77, 13, 'HVAC systems', 5),
-(78, 13, 'General industrial use', 6);
+(78, 13, 'General industrial use', 6),
+(79, 15, 'Industrial and Manufacturing Use\r\n\r\nConstruction and Infrastructure Projects\r\n\r\nCommercial and Business Operations\r\n\r\nRetail and Wholesale Supply\r\n\r\nAgricultural and Farming Activities\r\n\r\nMaintenance and Repair Work\r\n\r\nLogistics and Supply Chain Operations\r\n\r\nGeneral Trading and Distribution Needs', 2);
 
 -- --------------------------------------------------------
 
@@ -269,7 +271,8 @@ INSERT INTO `product_features` (`id`, `product_id`, `feature`, `sort_order`) VAL
 (75, 13, 'Superior corrosion protection', 3),
 (76, 13, 'Suitable for water supply systems', 4),
 (77, 13, 'Available in light, medium, heavy grades', 5),
-(78, 13, 'Standard 6m lengths', 6);
+(78, 13, 'Standard 6m lengths', 6),
+(79, 15, 'Premium Quality Products\r\n\r\nDurable and Long-Lasting Materials\r\n\r\nReliable and Consistent Performance\r\n\r\nCompetitive and Affordable Pricing\r\n\r\nWide Range of Product Options\r\n\r\nStrict Quality Control and Testing\r\n\r\nCustomer-Focused Product Design\r\n\r\nEfficient Supply and Timely Delivery\r\n\r\nTrusted by Businesses and Customers', 1);
 
 -- --------------------------------------------------------
 
@@ -303,7 +306,8 @@ INSERT INTO `product_images` (`id`, `product_id`, `image_path`, `alt_text`, `is_
 (10, 10, './assets/images/Gate-Valve-1.png', 'Forged Steel F304 Gate Valve', 1, 1),
 (11, 11, './assets/images/MS-pipes-Fittings.png', 'MS Pipes and Fittings', 1, 1),
 (12, 12, './assets/images/SS-Pipes-Fittings.png', 'SS Pipes and Fittings', 1, 1),
-(13, 13, './assets/images/GI-pipes-Fittings.png', 'GI Pipes and Fittings', 1, 1);
+(13, 13, './assets/images/GI-pipes-Fittings.png', 'GI Pipes and Fittings', 1, 1),
+(14, 15, 'assets/images/products/indian-traders-corp-1772782761-653.png', 'steel', 0, 2);
 
 -- --------------------------------------------------------
 
@@ -335,7 +339,8 @@ INSERT INTO `product_offers` (`id`, `product_id`, `category`, `icon`, `offer_tex
 (6, NULL, 'Ball / Check Valves', '🚚', 'FREE delivery on orders above ₹4,000', NULL, 1, 3),
 (7, NULL, 'Pipes & Fittings', '🔩', 'Buy MS + GI combo — get flat ₹400 off', NULL, 1, 1),
 (8, NULL, 'Pipes & Fittings', '📦', 'SS Pipe bulk order (50m+): custom pricing available', NULL, 1, 2),
-(9, NULL, 'Pipes & Fittings', '🚚', 'FREE delivery on pipe orders above ₹8,000', NULL, 1, 3);
+(9, NULL, 'Pipes & Fittings', '🚚', 'FREE delivery on pipe orders above ₹8,000', NULL, 1, 3),
+(10, 15, 'Gate / Globe Valves', '🏷Steel', 'Competitive Pricing on Bulk Orders\r\n\r\nSeasonal Discounts on Selected Products\r\n\r\nSpecial Deals for Long-Term Business Partners\r\n\r\nAttractive Offers for New Customers\r\n\r\nFlexible Payment Options for Bulk Purchases\r\n\r\nExclusive Trade Discounts for Distributors\r\n\r\nLimited Time Promotional Offers\r\n\r\nReliable After-Sales Support', 'valid till 2027', 1, 4);
 
 -- --------------------------------------------------------
 
@@ -433,7 +438,8 @@ INSERT INTO `product_specifications` (`id`, `product_id`, `spec_key`, `spec_valu
 (75, 13, 'Type', 'Hot Dip Galvanized', 3),
 (76, 13, 'Grade', 'Light / Medium / Heavy', 4),
 (77, 13, 'Size Range', '15mm to 150mm NB', 5),
-(78, 13, 'Length', '6m standard', 6);
+(78, 13, 'Length', '6m standard', 6),
+(79, 15, 'Indian Traders Corp', 'cast steel', 1);
 
 --
 -- Indexes for dumped tables
@@ -488,37 +494,37 @@ ALTER TABLE `product_specifications`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `product_applications`
 --
 ALTER TABLE `product_applications`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `product_features`
 --
 ALTER TABLE `product_features`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `product_images`
 --
 ALTER TABLE `product_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `product_offers`
 --
 ALTER TABLE `product_offers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `product_specifications`
 --
 ALTER TABLE `product_specifications`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
